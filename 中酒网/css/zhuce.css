@@ -1,0 +1,239 @@
+    * {
+        margin: 0;
+        padding: 0;
+        outline: 0 none;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 100%;
+        list-style: none;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: inherit;
+    }
+    
+    .top {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        line-height: 30px;
+        background: #F7F7F7;
+        height: 31px;
+    }
+    
+    body {
+        color: #545454;
+        background: #eef3fa;
+        font: 12px/1.5 'microsoft yahei', 'SimSun';
+    }
+    
+    .top .favorite {
+        float: left;
+        padding: 0 11px 0 16px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .top .favorite i {
+        top: 8px;
+        left: 0;
+        width: 13px;
+        height: 13px;
+        background: url(https://www.zhongjiu.cn/Areas/Web/images/20130725.png) no-repeat 0 0;
+        cursor: pointer;
+        position: absolute;
+        transition: all 1s;
+    }
+    
+    .top .favorite i :hover {
+        transform: rotate(360reg);
+    }
+    
+    .cl {
+        zoom: 1;
+    }
+    
+    .w {
+        width: 990px;
+        padding: 0;
+        margin: 0 auto;
+        zoom: 1;
+    }
+    
+    .cl {
+        zoom: 1;
+    }
+    
+    .quick_list li {
+        height: 30px;
+        padding: 0 11px 0 12px;
+        float: left;
+        position: relative;
+    }
+    
+    .quick_list {
+        float: right;
+        height: 30px;
+    }
+    
+    #logo {
+        padding: 10px 0;
+        float: none;
+        margin: 0;
+        position: relative;
+    }
+    
+    #logo img {
+        display: inline-block;
+    }
+    
+    #logo b {
+        position: absolute;
+        font-size: 30px;
+        text-align: center;
+        background-color: #f1f1f1;
+        width: 150px;
+        height: 46px;
+        top: 18px;
+        font-weight: 900;
+        margin-left: 20px;
+    }
+    
+    .mt {
+        padding-right: 10px;
+        position: relative;
+        overflow: visible;
+        margin-bottom: -1px;
+        border-bottom: 1px solid #dddddd;
+        height: 32px;
+        line-height: 32px;
+        background: #f2f2f2;
+    }
+    
+    .mt .extra {
+        position: absolute;
+        right: 20px;
+        top: 5px;
+    }
+    
+    .mc {
+        padding: 30px 0 20px;
+        width: 990px;
+        border: 1px solid #dddddd;
+        background: #fff;
+        margin: 0 auto;
+        border-width: 0px 1px 1px;
+    }
+    
+    .form {
+        width: 900px;
+        margin: 30px auto;
+    }
+    
+    .lie {
+        padding-top: 9px;
+        height: 60px;
+        line-height: 34px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .pname {
+        width: 190px;
+        text-align: right;
+        font-size: 14px;
+        color: #999;
+        padding-right: 10px;
+        float: left;
+    }
+    
+    .val {
+        position: relative;
+        width: 270px;
+        height: 38px;
+        float: left;
+    }
+    
+    .lie input {
+        width: 270px;
+        height: 38px;
+        /* padding: 10px 25px 10px 5px; */
+        border: 1px solid #cccccc;
+        /* float: none; */
+        font-size: 14px;
+        font-family: arial, "宋体";
+        color: #999;
+    }
+    
+    i {
+        position: absolute;
+        right: 12px;
+        top: 8px;
+        z-index: 5;
+        width: 16px;
+        height: 19px;
+    }
+    
+    .phone-box .i {
+        background: url(https://www.zhongjiu.cn/Areas/Web/images/login-all-bg.png)-373px -111px no-repeat #fff;
+    }
+    
+    .pas-box .i,
+    .pass-box .i {
+        background: url(https://www.zhongjiu.cn/Areas/Web/images/login-all-bg.png)-346px -108px no-repeat #fff;
+    }
+    
+    .verify-wrap {
+        width: 270px;
+        height: 40px;
+        background-color: #e5e5e5;
+        border: 1px solid #ccc;
+        margin: 5px auto;
+        position: relative;
+        top: -8px;
+        left: -126px;
+    }
+    
+    .btval input {
+        width: 132px;
+        height: 38px;
+    }
+    
+    .btval a {
+        margin-left: 10px;
+        border: 1px solid #dddddd;
+        padding: 0;
+        width: 106px;
+        height: 38px;
+        background: #f4f4f4;
+        margin-top: 0;
+        text-align: center;
+        line-height: 36px;
+        color: #333;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    .read label {
+        width: 198px;
+        height: 38px;
+        margin-left: 200px;
+    }
+    
+    .read input {
+        width: 12.8px;
+        height: 12px;
+    }
+    
+    .button input {
+        width: 270px;
+        height: 36px;
+        color: #FFF;
+        font-family: "微软雅黑";
+        font-size: 16px;
+        text-indent: -9999px;
+        font-weight: 800;
+        overflow: hidden;
+        background: url(https://www.zhongjiu.cn/Areas/Web/images/regist-btn.jpg) no-repeat;
+        border: none 0;
+        margin-left: 200px;
+        cursor: pointer;
+    }

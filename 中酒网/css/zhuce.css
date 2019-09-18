@@ -237,3 +237,12 @@
         margin-left: 200px;
         cursor: pointer;
     }
+    
+    .footer {
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    
+    .foot {
+        margin: 10px 0;
+    }

@@ -11,6 +11,33 @@
         font-family: inherit;
     }
     
+    .error {
+        color: #e4393c;
+        line-height: 36px;
+        height: 36px;
+        position: absolute;
+        top: 0px;
+        right: -275px;
+        width: 260px;
+        padding: 0 5px;
+        background: #FFEBEB;
+        border: 1px solid #ffbdbe;
+    }
+    
+    .active {
+        color: #666;
+        line-height: 36px;
+        background: #f7f7f7;
+        border: 1px solid #dddddd;
+        line-height: 36px;
+        height: 36px;
+        position: absolute;
+        top: 0px;
+        right: -275px;
+        width: 260px;
+        padding: 0 5px;
+    }
+    
     .top {
         width: 100%;
         border-bottom: 1px solid #eee;

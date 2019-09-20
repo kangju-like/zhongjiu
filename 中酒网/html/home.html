@@ -6,42 +6,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <script src="https://unpkg.com/swiper/js/swiper.js">
+    </script>
+    <link rel="stylesheet" href="../css/index.css">
 
 </head>
 
 <body>
+
     <div class="top">
-        <div class="top-c"><span class="hello">你好，欢迎来到中酒网！<a href="">去首页</a></span>
+        <div class="top-c"><span class="hello">你好， 欢迎来到  <span class="zjj">中酒网！</span><a class="top-link" href="">去首页</a></span>
             <ul class="top-center">
                 <li class="dl">
                     <a href="">请登录</a>
                 </li>
-                <li class="zc">
+                <li>
                     <a href="">免费注册</a>
                 </li>
             </ul>
-            <ul>
+            <ul class="quick_list">
                 <li>
-                    <a href="">我的中酒网<b></b></a>
+                    <a href="" class="dropdown">我的中酒网<b></b></a>
                 </li>
                 <li>
                     <a href="">购物车0件</a>
                 </li>
-                <li>
+                <li class="dropdown">
                     <a href="">微信端</a>
                 </li>
-                <li>
+                <li class="dropdown">
                     <a href="">APP</a>
                 </li>
-                <li>
+                <li class="dropdown">
                     <a href="">卖家中心<b></b></a>
                 </li>
-                <li>
+                <li class="dropdown">
                     <a href="">订购热线：400-798-9999</a>
                 </li>
             </ul>
         </div>
     </div>
+    <div class="header">
+        <div class="head-box">
+            <div class="logo">
+                <a href="/">
+                    <img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/Site/logo.png" alt="Himall">
+                </a>
+            </div>
+            <div class="gif">
+                <a href="" target="_blank">
+                    <img src="http://img5.zhongjiu.cn/pro/dt/gif.gif">
+                </a>
+            </div>
+            <div class="top-head-ad">
+                <a href=""><img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201802011650389711990.jpg" width="160" height="80"></a>
+            </div>
+            <div class="search">
+                <div class="search-form cl">
+                    <ul>
+                        <li>商品</li>
+                        <li>店铺</li>
+                    </ul>
+                    <label>商品</label>
+                    <div class="twitter-typeahead" style="display: inline-block; direction: ltr;"><input type="text" id="searchBox" class="text tt-input" style="float: none; position: relative;" name="" value="" placeholder="天佑德" autocomplete="off" spellcheck="false" dir="auto"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: nowrap; font-family: tahoma, Arial, &quot;microsoft yahei&quot;, SimSun; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+                        <div class="tt-dropdown-menu" style="position: absolute; top: 110%; left: -3px; z-index: 10000; display: none; right: auto;">
+                            <div class="tt-dataset-0"></div>
+                        </div>
+                    </div>
+                    <input type="button" id="searchBtn" class="button" value="搜索">
+                </div>
+                <div class="hot-search">
+
+                    <a href="" class="active">西凤</a>
+                    <a href="">青稞酒</a>
+                    <a href="">洋河</a>
+                    <a href="">习酒</a>
+                    <a href="">小糊涂仙</a>
+                    <a href="">酒鬼酒</a>
+                    <a href="">张裕</a>
+                    <a href="">拉菲</a>
+                    <a href="">董酒</a>
+                    <a href="">华夏长城</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <div class="nav-content">
+            <div class="categorys">
+                <div class="cate-all"><a href="">全部商品分类</a><b></b></div>
+            </div>
+            <ul class="nav cl">
+
+                <li class="_banner cur" id="homePage" index=""><a href="/">首页</a></li>
+                <li class="_banner"><a target="_blank" href="">白酒专区</a></li>
+                <li class="_banner"><a target="_blank" href="">天佑德青稞酒</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="swiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201804281238366187370.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201807241443177882630.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201802091458155366980.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201802091503150728240.jpg" alt=""></div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+
+            <!-- 如果需要导航按钮 -->
+            <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+
+            <!-- 如果需要滚动条 -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+        <div class="small-banner">
+            <a href="" target="_blank"><img class="lazyload" src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201709121117114935610.jpg" data-url="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201709121117114935610.jpg"></a>
+            <div class="banner-separator"></div>
+            <a href="" target="_blank"><img class="lazyload" src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201708221047305409910.jpg" data-url="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201708221047305409910.jpg"></a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="cont">
+            <div class="floor-title">
+
+                <a class="gengduo" href="http://pro.zhongjiu.cn/20170719/baijiu719.html" target="_blank">更多 &gt;&gt;</a>
+                <ul>
+                    <li class="active">热销爆款<s></s></li>
+
+                </ul>
+
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        new Swiper('.swiper-container')
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: true, //可选选项，自动滑动
+            loop: true, // 循环模式选项
+            // autoplay: {
+            //     delay: 3000,
+            //     stopOnLastSlide: false,
+            //     disableOnInteraction: true,
+            // },
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+
+        })
+        for (i = 0; i < mySwiper.pagination.bullets.length; i++) {
+            mySwiper.pagination.bullets[i].onmouseover = function() {
+                this.click();
+            };
+        }
+    </script>
 </body>
 
 </html>

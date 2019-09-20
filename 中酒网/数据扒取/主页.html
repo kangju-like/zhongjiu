@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <script>
+        // 热销
+        var ele = document.querySelector(".content_recont")
+        var e = ele.querySelectorAll("li")
+        var arr = []
+        for (i = 0; i < e.length; i++) {
+            var o = {};
+            o.src = e[i].querySelector("img").src;
+            o.name = e[i].querySelector("h3").innerText;
+            o.price = e[i].querySelector("p").innerText;
+            arr.push(o)
+        }
+        //楼层
+        var e = document.querySelector(".floor-bd");
+        var o = {};
+        o.left_img = e.querySelectorAll("img")[0].src;
+        var s = document.createElement("script");
+        s.src = "https://code.jquery.com/jquery-3.4.1.min.js"
+        document.body.appendChild(s)
+    </script>
+</body>
+
+</html>

@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="../js/jquery-3.4.1.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
     <script src="https://unpkg.com/swiper/js/swiper.js">
     </script>
     <link rel="stylesheet" href="../css/index.css">
+
 
 </head>
 
@@ -116,14 +119,6 @@
             </div>
 
             <div class="swiper-pagination"></div>
-
-
-            <!-- 如果需要导航按钮 -->
-            <!-- <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div> -->
-
-            <!-- 如果需要滚动条 -->
-            <!-- <div class="swiper-scrollbar"></div> -->
         </div>
         <div class="small-banner">
             <a href="" target="_blank"><img class="lazyload" src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201709121117114935610.jpg" data-url="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201709121117114935610.jpg"></a>
@@ -132,8 +127,8 @@
         </div>
     </div>
     <div class="content">
-        <div class="cont">
-            <div class="floor-title">
+        <div class="cont baokuan">
+            <div class="floor-title floor">
 
                 <a class="gengduo" href="http://pro.zhongjiu.cn/20170719/baijiu719.html" target="_blank">更多 &gt;&gt;</a>
                 <ul>
@@ -144,6 +139,26 @@
 
 
             </div>
+            <ul class="fl-con"></ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="cont">
+            <div class="floor-hd">
+                <h3>帮您选酒</h3>
+                <ul>
+                    <li class="active">Hot！热卖<s></s></li>
+                    <li class="">必备口粮<s></s></li>
+                    <li class="">送礼佳品<s></s></li>
+                    <li>大型宴请<s></s></li>
+                    <li>
+                        <a href="" target="_blank">更多 &gt;&gt;</a><s></s>
+                    </li>
+                </ul>
+            </div>
+            <div class="floor-bd">
+
+            </div>
         </div>
     </div>
     <script>
@@ -151,17 +166,10 @@
         var mySwiper = new Swiper('.swiper-container', {
             autoplay: true, //可选选项，自动滑动
             loop: true, // 循环模式选项
-            // autoplay: {
-            //     delay: 3000,
-            //     stopOnLastSlide: false,
-            //     disableOnInteraction: true,
-            // },
-            // 如果需要分页器
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             }
-
         })
         for (i = 0; i < mySwiper.pagination.bullets.length; i++) {
             mySwiper.pagination.bullets[i].onmouseover = function() {

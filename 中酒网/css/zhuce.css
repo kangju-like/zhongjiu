@@ -16,12 +16,20 @@
         line-height: 36px;
         height: 36px;
         position: absolute;
-        top: 0px;
-        right: -275px;
+        top: 10px;
+        right: 180px;
         width: 260px;
         padding: 0 5px;
+        display: none;
         background: #FFEBEB;
         border: 1px solid #ffbdbe;
+    }
+    
+    .arror span,
+    .active span {
+        padding: 5px 0;
+        line-height: 13px;
+        display: block;
     }
     
     .active {
@@ -31,9 +39,10 @@
         border: 1px solid #dddddd;
         line-height: 36px;
         height: 36px;
+        display: none;
         position: absolute;
-        top: 0px;
-        right: -275px;
+        top: 10px;
+        right: 180px;
         width: 260px;
         padding: 0 5px;
     }
@@ -180,19 +189,20 @@
     }
     
     .lie input {
-        width: 270px;
+        width: 260px;
         height: 38px;
         /* padding: 10px 25px 10px 5px; */
         border: 1px solid #cccccc;
         /* float: none; */
         font-size: 14px;
+        padding-left: 5px;
         font-family: arial, "宋体";
         color: #999;
     }
     
     i {
         position: absolute;
-        right: 12px;
+        right: 22px;
         top: 8px;
         z-index: 5;
         width: 16px;
@@ -224,7 +234,7 @@
         height: 38px;
     }
     
-    .btval a {
+    .btval span {
         margin-left: 10px;
         border: 1px solid #dddddd;
         padding: 0;
@@ -237,6 +247,11 @@
         color: #333;
         text-decoration: none;
         display: inline-block;
+        cursor: pointer;
+    }
+    
+    .btval span:hover {
+        color: red;
     }
     
     .read label {
@@ -272,4 +287,8 @@
     
     .foot {
         margin: 10px 0;
+    }
+    
+    .block {
+        display: block;
     }

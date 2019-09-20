@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <title>注册页面</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <!-- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
     <script src="../js/jq-slideVerify.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" href="../css/zhuce.css">
     <link rel="stylesheet" href="../css/slide-unlock.css">
+    <script src="../js/zhuce.js"></script>
 
-    <script src="../js/jquery-3.4.1.js"></script>
 
 
 
@@ -44,11 +45,11 @@
                 <div class="phone-box lie">
                     <span class="pname">手机号码：</span>
                     <div class="phval val">
-                        <input type="text">
+                        <input id="phone" type="text">
                         <i class="i"></i>
                     </div>
-                    <label id="Phone_error" style="display:none;" class="error">请输入手机号码</label>
-                    <label id="Phone_active" style="display:none;" class="active">请输入手机号码</label>
+                    <label id="Phone_error" class="error">请输入正确的手机号码</label>
+                    <label id="Phone_active" class="active">请输入手机号码</label>
                 </div>
                 <div class="hua lie">
                     <span class="pname">滑块验证：</span>
@@ -57,31 +58,34 @@
                 <div class="pas-box lie">
                     <span class="pname">设置密码：</span>
                     <div class="pasval val">
-                        <input type="text">
+                        <input id="passwordA" type="password">
                         <i class="i"></i>
                     </div>
-                    <label id="Pas_error" style="display:none;" class="error">请输入手机号码</label>
-                    <label id="Pas_active" style="display:none;" class="active">请输入手机号码</label>
+                    <label id="pwd_error" class="error"><span>密码长度只能在6-20位字符之间，不包含空格</span></label>
+                    <label id="pwd_info" class="active"><span>位字符，可使用字母、数字或符号的组合,，不建议使用纯字母、纯数字、纯符号</span></label>
+
                 </div>
                 <div class="pass-box lie">
                     <span class="pname">确认密码：</span>
                     <div class="passval val">
-                        <input type="text">
+                        <input id="passwordB" type="password">
                         <i class="i"></i>
                     </div>
-                    <label id="Pass_error" style="display:none;" class="error">请输入手机号码</label>
-                    <label id="Pass_active" style="display:none;" class="active">请输入手机号码</label>
+                    <label id="pwdRepeat_error" class="error"><span>两次输入密码不一致</span></label>
+                    <label id="pwdRepeat_info" class="active"><span>请再次输入密码</span></label>
+
                 </div>
                 <div class="bt-box lie">
                     <span class="pname">手机验证码：</span>
                     <div class="btval val">
-                        <input type="text">
-                        <a href="">获取验证码</a>
+                        <input id="msgcord" type="text">
+                        <span id="msgbtn">获取验证码</span>
                     </div>
-
+                    <label id="msglab" class="error">请输入验证码</label>
                 </div>
                 <div class="lie read">
                     <label><input type="checkbox" class="checkbox"  id="read">我已阅读并同意《<a href="" style="color:#e3393c" id="protocol">用户注册协议</a>》</label>
+                    <label id="checkAgreement_error" class="error">请仔细阅读并同意以上协议</label>
                 </div>
                 <div class="button lie">
                     <input type="button" value="立即注册">
@@ -99,14 +103,15 @@
 </body>
 
 <script type="text/javascript">
+    let res
     $(function() {
         console.log(parseFloat('1px'))
-        var res
+
 
         var SlideVerifyPlug = window.slideVerifyPlug;
         var slideVerify = new SlideVerifyPlug('#verify-wrap', {
             wrapWidth: '272', //设置 容器的宽度 ,不设置的话，会设置成100%，需要自己在外层包层div,设置宽度，这是为了适应方便点；
-            initText: '请按住滑', //设置  初始的 显示文字
+            initText: '请按住往右滑', //设置  初始的 显示文字
             sucessText: '验证通过', //设置 验证通过 显示的文字
             getSuccessState: function(res) {
                 //当验证完成的时候 会 返回 res 值 true，只留了这个应该够用了 
@@ -119,7 +124,7 @@
         // $("#getState").on('click', function() {
         //     alert(slideVerify.slideFinishState); //这个可以拿到 当前验证状态  是否完成
         // })
-        console.log(res);
+
 
         var slideVerify2 = new SlideVerifyPlug('#verify-wrap2', {
             initText: '请按住滑块',

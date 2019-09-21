@@ -11,6 +11,15 @@
 
 <body>
     <script>
+        var a = document.querySelector(".mc");
+        var it = a.querySelectorAll(".item");
+        var res = []
+        for (let t = 0; t < it.length; t++) {
+            var s = it[t];
+            var
+
+        }
+
         // 热销
         var ele = document.querySelector(".content_recont")
         var e = ele.querySelectorAll("li")
@@ -23,12 +32,88 @@
             arr.push(o)
         }
         //楼层
-        var e = document.querySelector(".floor-bd");
+        var t = document.querySelectorAll(".floors .floor-hd");
+        var e = document.querySelectorAll(".floor-bd");
+        var res = []
+        for (let l = 0; l < t.length; l++) {
+            var o = {};
+            o.left_img = e[l].querySelectorAll("img")[0].src;
+            var tr = e[l].querySelector("tr");
+            var td = tr.querySelectorAll("td");
+            var lft = [];
+            for (let i = 0; i < td.length; i++) {
+                lft.push(td[i].innerText)
+            }
+            o.lt = lft;
+            var lt3 = [];
+            var t3 = e[l].querySelectorAll(".scroll-A");
+            for (let i = 0; i < t3.length; i++) {
+                var lt33 = [];
+                var t33 = t3[i].querySelectorAll("img");
+                for (let a = 0; a < t33.length; a++) {
+                    lt33.push(t33[a].src)
+                }
+                lt3.push(lt33)
+            }
+            o.left_img = lt3;
+
+            var abt = [];
+            var bt = e[l].querySelectorAll(".Content2 img");
+            for (let i = 0; i < bt.length; i++) {
+                abt.push(bt[i].src)
+            }
+            o.bottom_img = abt;
+            var rbox = e[l].querySelectorAll(".content-right-box .content-right-img li img");
+            var rarr = []
+            for (let i = 0; i < rbox.length; i++) {
+                rarr.push(rbox[i].src)
+            }
+            o.right_img = rarr;
+            var tabs = e[l].querySelectorAll(".content-right-tab");
+            var abs = [];
+            for (let i = 0; i < tabs.length; i++) {
+                var ab = [];
+                var tab = tabs[i].querySelectorAll("li img");
+                for (let a = 0; a < tab.length; a++) {
+                    ab.push(tab[a].src)
+                }
+                abs.push(ab)
+            }
+
+            o.right_tab = abs;
+            o.thd = t[l].querySelector("h3").innerText;
+            var thl = [];
+            var tl = t[l].querySelectorAll("li");
+            for (let i = 0; i < tl.length; i++) {
+                thl.push(tl[i].innerText)
+            }
+            o.topli = thl;
+            res.push(o)
+        }
+        console.log(res)
+
+
+
+        // 底部数据
+        var b = document.querySelector(".Brand-shop");
         var o = {};
-        o.left_img = e.querySelectorAll("img")[0].src;
-        var s = document.createElement("script");
-        s.src = "https://code.jquery.com/jquery-3.4.1.min.js"
-        document.body.appendChild(s)
+        o.title = b.querySelector("h3").innerText;
+        var limg = b.querySelector(".BD-content .BD-left img");
+        o.left_img = limg.src;
+        var cimgs = b.querySelectorAll(".scroll-brand");
+        var cimg = [];
+        for (let i = 0; i < cimgs.length; i++) {
+            var img = [];
+            var mg = cimgs[i].querySelectorAll("img")
+            for (let s = 0; s < mg.length; s++) {
+                img.push(mg[s].src)
+            }
+            cimg.push(img)
+        }
+        o.content_img = cimg;
+        var rightimg = b.querySelector("img");
+        o.right_img = rightimg.src;
+        console.log(o);
     </script>
 </body>
 

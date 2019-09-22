@@ -16,9 +16,38 @@
         var res = []
         for (let t = 0; t < it.length; t++) {
             var s = it[t];
-            var
+            var o = {}
+            var li = s.querySelector("span h3 i");
+            o.left_i = li.style.background;
+            var lt = s.querySelector("span h3 a");
+            o.left_t = lt.innerText;
+            var la = s.querySelectorAll("span p a");
+            var La = []
+            for (let a = 0; a < la.length; a++) {
+                La.push(la[a].innerText)
+            }
+            o.left_a = La;
+            var ct = s.querySelectorAll("dt");
+            var dd = s.querySelectorAll("dd");
+            var tab_cont = [];
+            for (let c = 0; c < ct.length; c++) {
+                var tabc = []
+                tabc.push(ct[c].innerText)
+                var taba = dd[c].querySelectorAll("li a");
 
+                for (let a = 0; a < taba.length; a++) {
+                    tabc.push(taba[a].innerText)
+                }
+                tab_cont.push(tabc)
+            }
+            o.tab_content = tab_cont;
+            var rt = s.querySelector(".cate-right h5");
+            o.right_title = rt.innerText;
+            var right_img = s.querySelector(".cate-right li img");
+            o.right_img = right_img.src;
+            res.push(o);
         }
+        console.log(res);
 
         // 热销
         var ele = document.querySelector(".content_recont")

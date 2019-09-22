@@ -432,15 +432,19 @@ div {
 }
 
 .swiper .small-banner img {
-    vertical-align: top;
     opacity: .9;
     filter: alpha(opacity=9);
-    -webkit-transition: -webkit-transform .2s linear;
-    -moz-transition: -moz-transform .2s linear;
-    -o-transition: -o-transform .2s linear;
     transition: transform .2s linear;
     width: 200px;
     height: 243px;
+}
+
+.swiper .small-banner img:nth-of-type(1) {
+    margin-top: 0px;
+}
+
+.lazyload:hover {
+    transform: translateX(-5px)
 }
 
 

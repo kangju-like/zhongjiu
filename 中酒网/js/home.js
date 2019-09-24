@@ -1,86 +1,74 @@
-var str = `
-<div class="category">
-                <div class="mc">
+$(function() {
+    function create(data) {
+        let tabs = [];
 
-                       
-                        <div class="item">
-                            <span>
-                                <h3>
-                                    <i class="icon_bj" style="background:url( http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280918494822090.png ) no-repeat;"></i>
-                                    <a href="">葡萄酒</a>
-                                </h3>
-                                <p>
-                                                <a href="" target="_blank">拉菲</a>
-                                                <a href="" target="_blank">张裕</a>
-                                                <a href="" target="_blank" class="active">马克斯威</a>
-                                </p>
-                            </span>
-                            <div class="category-details">
-                                <div class="subitem">
-                                    <dl class="first" style="z-index:99;">
-                                            <dt>品牌</dt>
-                                            <dd class="clearfix">
-                                                <ul>
-                                                                <li><a title="" href="" target="_blank">黄尾袋鼠</a></li>
-                                                                <li><a title="" href="" target="_blank">佩西</a></li>
-                                                                <li><a title="" href="" target="_blank">乐船</a></li>
-                                                                <li><a title="" href="" target="_blank">小龙船</a></li>
-                                                                <li><a title="" href="" target="_blank">特拉托</a></li>
-                                                                <li class="lastChild"><a title="" href="" target="_blank">圣迪斯</a></li>
-                                                                </ul>
-                                                                            <ul>
-                                                                <li><a title="" href="" target="_blank">奔富</a></li>
-                                                                <li><a title="" href="" target="_blank">康迪</a></li>
+        for (let s = 0; s < data.length; s++) {
+            let left_i = `<i class="icon_bj" style="background:${data[s].left_i}"></i>`
+            let left_t = `<a href="">${data[s].left_t}</a>`
+            var left_A = [];
+            for (let a = 0; a < data[s].left_a.length; a++) {
+                let aa = `<a href="" target="_blank">${data[s].left_a[a]}</a>`
+                left_A.push(aa)
+            }
+            let left_a = left_A.join("");
+            var con = [];
+            for (let d = 0; d < data[s].tab_content.length; d++) {
+                con.push(`< dt >${data[s].tab_content[d][0]}< /dt>`)
+                con.push(` <dd class="clearfix"><ul>`)
+                let tt = []
+                for (let t = 1; t < data[s].tab_content[d].length; t++) {
+                    tt.push(`<li><a title="" href="" target="_blank">${data[s].tab_content[d][t]}</a></li>`)
+                }
+                con.push(tt.join(""))
+                con.push(`</ul></dd>`)
+            }
+            let content = con.join("")
+            let right_title = `<h5>${data[s].right_title}</h5>`
+            let right_img = `<img style="" src="${data[s].right_img}"  class="lazyload" >`
 
-
-
-                                                </ul>
-                                            </dd>
-                                            <dt>类型</dt>
-                                            <dd class="clearfix">
-                                                <ul>
-                                                                <li><a title="" href="" target="_blank">干红葡萄酒</a></li>
-                                                                <li><a title="" href="" target="_blank">干白葡萄酒</a></li>
-                                                                <li><a title="" href="" target="_blank">气泡/香槟</a></li>
-                                                                <li><a title="" href="" target="_blank">冰酒</a></li>
-                                                                <li><a title="" href="" target="_blank">果酒</a></li>
-                                                                <li class="lastChild"><a title="" href="" target="_blank">甜桃红</a></li>
-                                                                </ul>
-                                                                            <ul>
-                                                                <li><a title="" href="" target="_blank">甜白</a></li>
-
-
-
-                                                </ul>
-                                            </dd>
-                                            <dt>产区</dt>
-                                            <dd class="clearfix">
-                                                <ul>
-                                                                <li><a title="" href="" target="_blank">法国</a></li>
-                                                                <li><a title="" href="" target="_blank">西班牙</a></li>
-                                                                <li><a title="" href="" target="_blank">智利</a></li>
-                                                                <li><a title="" href="" target="_blank">阿根廷</a></li>
-                                                                <li><a title="" href="" target="_blank">澳大利亚</a></li>
-                                                                <li class="lastChild"><a title="" href="" target="_blank">中国</a></li>
-                                                                </ul>
-                                                                            <ul>
-                                                                <li><a title="" href="" target="_blank">美国</a></li>
-
-
-
-                                                </ul>
-                                            </dd>
-
-                                    </dl>
+            let tab = `
+        <div class="category">
+                        <div class="mc">
+        
+                               
+                                <div class="item">
+                                    <span>
+                                        <h3>
+                                            ${left_i}
+                                           ${left_t}
+                                        </h3>
+                                        <p>
+                                                       ${left_a}
+                                        </p>
+                                    </span>
+                                    <div class="category-details">
+                                        <div class="subitem">
+                                            <dl class="first" style="z-index:99;">
+                                                   
+                                                   ${content}
+        
+                                            </dl>
+                                        </div>
+                                        <div class="cate-right">
+                                            ${right_title}
+                                            <ul>
+                                                ${right_img}
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="cate-right">
-                                    <h5>推荐品牌</h5>
-                                    <ul>
-                                            <li><a href="" title="张裕干红葡萄酒"><img style="" src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091354318083820.jpg" data-url="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091354318083820.jpg" class="lazyload" alt="张裕干红葡萄酒"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                                
                         </div>
-                        
-                </div>
-            </div>`
+                    </div>
+                    `
+            tabs.push(tab)
+
+        }
+        var cat = document.querySelector(".categorys")
+        cat.innerHTML = ` <div class="cate-all"><a href="">全部商品分类</a><b></b></div>${tabs.join("")}`
+    };
+    create(l)
+    $(".item").each(function() {
+        this.chi
+    })
+})

@@ -1,242 +1,242 @@
-[{
-        "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280918332737800.png\") no-repeat",
-        "left_t": "白酒",
-        "left_a": [
-            "茅台",
-            "五粮液",
-            "天佑德"
-        ],
-        "tab_content": [
-            [
-                "品牌",
-                "泸州老窖",
-                "洋河",
-                "剑南春",
-                "牛栏山",
-                "红星",
-                "西凤",
-                "国窖1573",
-                "小糊涂仙",
-                "郎酒",
-                "习酒",
-                "鸭溪窖",
-                "汾酒",
-                "董酒",
-                "酒鬼酒",
-                "一道泓",
-                "五粮醇",
-                "衡水老白干",
-                "更多"
-            ],
-            [
-                "香型",
-                "酱香型",
-                "浓香型",
-                "绵柔型",
-                "凤香型",
-                "董香型"
-            ],
-            [
-                "产地",
-                "贵州",
-                "江西",
-                "四川",
-                "江苏",
-                "山西",
-                "内蒙",
-                "青海"
-            ]
-        ],
-        "right_title": "推荐品牌",
-        "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091338113466590.jpg"
-    },
-    {
-        "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280918494822090.png\") no-repeat",
-        "left_t": "葡萄酒",
-        "left_a": [
-            "拉菲",
-            "张裕",
-            "马克斯威"
-        ],
-        "tab_content": [
-            [
-                "品牌",
-                "黄尾袋鼠",
-                "佩西",
-                "乐船",
-                "小龙船",
-                "特拉托",
-                "圣迪斯",
-                "奔富",
-                "康迪"
-            ],
-            [
-                "类型",
-                "干红葡萄酒",
-                "干白葡萄酒",
-                "气泡/香槟",
-                "冰酒",
-                "果酒",
-                "甜桃红",
-                "甜白"
-            ],
-            [
-                "产区",
-                "法国",
-                "西班牙",
-                "智利",
-                "阿根廷",
-                "澳大利亚",
-                "中国",
-                "美国"
-            ]
-        ],
-        "right_title": "推荐品牌",
-        "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091354318083820.jpg"
-    },
-    {
-        "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280919080930420.png\") no-repeat",
-        "left_t": "洋酒",
-        "left_a": [
-            "马爹利",
-            "人头马",
-            "芝华士"
-        ],
-        "tab_content": [
-            [
-                "品牌",
-                "皇家贝斯",
-                "深蓝",
-                "百利甜",
-                "绝对伏特加",
-                "杰克丹尼",
-                "百龄坛",
-                "百加得",
-                "尊尼获加",
-                "轩尼诗",
-                "皇家礼炮",
-                "摩根船长"
-            ],
-            [
-                "适用",
-                "聚会用酒",
-                "商务用酒"
-            ],
-            [
-                "产地",
-                "中国",
-                "法国",
-                "英国",
-                "美国"
-            ]
-        ],
-        "right_title": "推荐品牌",
-        "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091406164460190.jpg"
-    },
-    {
-        "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280919312902820.png\") no-repeat",
-        "left_t": "黄酒",
-        "left_a": [
-            "尧喝货",
-            "唐宋",
-            "塔牌"
-        ],
-        "tab_content": [
-            [
-                "品牌",
-                "女儿红",
-                "古越龙山",
-                "石库门",
-                "劲酒",
-                "会稽山"
-            ],
-            [
-                "适用",
-                "聚会用酒",
-                "礼节拜访",
-                "婚庆用酒"
-            ]
-        ],
-        "right_title": "推荐品牌",
-        "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091713216641350.jpg"
-    },
-    {
-        "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280919479355120.png\") no-repeat",
-        "left_t": "礼盒专区",
-        "left_a": [
-            "五粮液五星级"
-        ],
-        "tab_content": [
-            [
-                "品牌",
-                "礼盒",
-                "五粮液",
-                "汾酒",
+var l = [{
+            "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280918332737800.png\") no-repeat",
+            "left_t": "白酒",
+            "left_a": [
                 "茅台",
-                "剑南春",
+                "五粮液",
+                "天佑德"
+            ],
+            "tab_content": [
+                [
+                    "品牌",
+                    "泸州老窖",
+                    "洋河",
+                    "剑南春",
+                    "牛栏山",
+                    "红星",
+                    "西凤",
+                    "国窖1573",
+                    "小糊涂仙",
+                    "郎酒",
+                    "习酒",
+                    "鸭溪窖",
+                    "汾酒",
+                    "董酒",
+                    "酒鬼酒",
+                    "一道泓",
+                    "五粮醇",
+                    "衡水老白干",
+                    "更多"
+                ],
+                [
+                    "香型",
+                    "酱香型",
+                    "浓香型",
+                    "绵柔型",
+                    "凤香型",
+                    "董香型"
+                ],
+                [
+                    "产地",
+                    "贵州",
+                    "江西",
+                    "四川",
+                    "江苏",
+                    "山西",
+                    "内蒙",
+                    "青海"
+                ]
+            ],
+            "right_title": "推荐品牌",
+            "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091338113466590.jpg"
+        },
+        {
+            "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280918494822090.png\") no-repeat",
+            "left_t": "葡萄酒",
+            "left_a": [
+                "拉菲",
                 "张裕",
-                "拉菲"
+                "马克斯威"
             ],
-            [
-                "类型",
-                "酱香型",
-                "浓香型",
-                "干红葡萄酒",
-                "干白葡萄酒"
+            "tab_content": [
+                [
+                    "品牌",
+                    "黄尾袋鼠",
+                    "佩西",
+                    "乐船",
+                    "小龙船",
+                    "特拉托",
+                    "圣迪斯",
+                    "奔富",
+                    "康迪"
+                ],
+                [
+                    "类型",
+                    "干红葡萄酒",
+                    "干白葡萄酒",
+                    "气泡/香槟",
+                    "冰酒",
+                    "果酒",
+                    "甜桃红",
+                    "甜白"
+                ],
+                [
+                    "产区",
+                    "法国",
+                    "西班牙",
+                    "智利",
+                    "阿根廷",
+                    "澳大利亚",
+                    "中国",
+                    "美国"
+                ]
             ],
-            [
-                "产地",
-                "四川",
-                "贵州",
-                "法国",
-                "美国"
-            ]
-        ],
-        "right_title": "推荐品牌",
-        "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201708251457075503740.jpg"
-    },
-    {
-        "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280920068115450.png\") no-repeat",
-        "left_t": "婚庆专区",
-        "left_a": [
-            "茅台",
-            "拉菲",
-            "五粮液",
-            "张裕"
-        ],
-        "tab_content": [
-            [
-                "品牌",
-                "剑南春",
-                "泸州老窖",
-                "伊莎特",
-                "佩西",
-                "卡萨玛利亚",
-                "龙船康帝",
-                "郎酒"
+            "right_title": "推荐品牌",
+            "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091354318083820.jpg"
+        },
+        {
+            "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280919080930420.png\") no-repeat",
+            "left_t": "洋酒",
+            "left_a": [
+                "马爹利",
+                "人头马",
+                "芝华士"
             ],
-            [
-                "种类",
-                "白酒",
-                "红酒",
-                "洋酒",
-                "起泡酒",
-                "黄酒"
+            "tab_content": [
+                [
+                    "品牌",
+                    "皇家贝斯",
+                    "深蓝",
+                    "百利甜",
+                    "绝对伏特加",
+                    "杰克丹尼",
+                    "百龄坛",
+                    "百加得",
+                    "尊尼获加",
+                    "轩尼诗",
+                    "皇家礼炮",
+                    "摩根船长"
+                ],
+                [
+                    "适用",
+                    "聚会用酒",
+                    "商务用酒"
+                ],
+                [
+                    "产地",
+                    "中国",
+                    "法国",
+                    "英国",
+                    "美国"
+                ]
             ],
-            [
-                "产地",
-                "贵州",
-                "四川",
-                "澳大利亚",
-                "法国",
-                "英国"
-            ]
-        ],
-        "right_title": "推荐品牌",
-        "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201708251457518162350.jpg"
-    }
-]
-//一楼
+            "right_title": "推荐品牌",
+            "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091406164460190.jpg"
+        },
+        {
+            "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280919312902820.png\") no-repeat",
+            "left_t": "黄酒",
+            "left_a": [
+                "尧喝货",
+                "唐宋",
+                "塔牌"
+            ],
+            "tab_content": [
+                [
+                    "品牌",
+                    "女儿红",
+                    "古越龙山",
+                    "石库门",
+                    "劲酒",
+                    "会稽山"
+                ],
+                [
+                    "适用",
+                    "聚会用酒",
+                    "礼节拜访",
+                    "婚庆用酒"
+                ]
+            ],
+            "right_title": "推荐品牌",
+            "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091713216641350.jpg"
+        },
+        {
+            "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280919479355120.png\") no-repeat",
+            "left_t": "礼盒专区",
+            "left_a": [
+                "五粮液五星级"
+            ],
+            "tab_content": [
+                [
+                    "品牌",
+                    "礼盒",
+                    "五粮液",
+                    "汾酒",
+                    "茅台",
+                    "剑南春",
+                    "张裕",
+                    "拉菲"
+                ],
+                [
+                    "类型",
+                    "酱香型",
+                    "浓香型",
+                    "干红葡萄酒",
+                    "干白葡萄酒"
+                ],
+                [
+                    "产地",
+                    "四川",
+                    "贵州",
+                    "法国",
+                    "美国"
+                ]
+            ],
+            "right_title": "推荐品牌",
+            "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201708251457075503740.jpg"
+        },
+        {
+            "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280920068115450.png\") no-repeat",
+            "left_t": "婚庆专区",
+            "left_a": [
+                "茅台",
+                "拉菲",
+                "五粮液",
+                "张裕"
+            ],
+            "tab_content": [
+                [
+                    "品牌",
+                    "剑南春",
+                    "泸州老窖",
+                    "伊莎特",
+                    "佩西",
+                    "卡萨玛利亚",
+                    "龙船康帝",
+                    "郎酒"
+                ],
+                [
+                    "种类",
+                    "白酒",
+                    "红酒",
+                    "洋酒",
+                    "起泡酒",
+                    "黄酒"
+                ],
+                [
+                    "产地",
+                    "贵州",
+                    "四川",
+                    "澳大利亚",
+                    "法国",
+                    "英国"
+                ]
+            ],
+            "right_title": "推荐品牌",
+            "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201708251457518162350.jpg"
+        }
+    ]
+    //一楼
 var bk = [{
         "src": "http://img6.zhongjiu.cn/resourceb2b2c/Storage/Shop/1/Products/95390/1_220.png",
         "name": "42度天佑德青稞酒小黑125ml×4",

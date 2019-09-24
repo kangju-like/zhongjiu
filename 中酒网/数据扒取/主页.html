@@ -10,6 +10,58 @@
 </head>
 
 <body>
+    <div class="floor">
+        hd!!!
+
+        <div class="floor-bd">
+            <div class="floor-content cl" name="__defaultstyle">
+                <div class="Content1 clearfix">
+                    <div class="content-left">
+                        <div class="slide">
+
+
+                        </div>
+                        <div class="cata-flo">
+                            <table>
+                                <tbody>
+                                    <tr>
+
+                                        lt
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <div class="content-brand">
+                            <b class="prev"></b>
+                            <b class="next"></b>
+                            <div class="brand-A">
+
+                                <div class="brandA-wrap">
+
+                                    alimg
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-right-box" name="__contentrightbox">
+                        right_box
+                    </div>
+                </div>
+
+                <ul class="Content2 clearfix" name="__content2clearfix">
+                    bottom
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
     <script>
         var a = document.querySelector(".mc");
         var it = a.querySelectorAll(".item");
@@ -66,7 +118,7 @@
         var res = []
         for (let l = 0; l < t.length; l++) {
             var o = {};
-            o.left_img = e[l].querySelectorAll("img")[0].src;
+            o.lef_img = e[l].querySelectorAll("img")[0].src;
             var tr = e[l].querySelector("tr");
             var td = tr.querySelectorAll("td");
             var lft = [];
@@ -103,8 +155,15 @@
             for (let i = 0; i < tabs.length; i++) {
                 var ab = [];
                 var tab = tabs[i].querySelectorAll("li img");
+                var tabp = tabs[i].querySelectorAll("li p");
+                var tabh = tabs[i].querySelectorAll("li h3");
                 for (let a = 0; a < tab.length; a++) {
-                    ab.push(tab[a].src)
+
+                    var bs = [];
+                    bs.push(tab[a].src)
+                    bs.push(tabp[a].innerText)
+                    bs.push(tabh[a].innerText)
+                    ab.push(bs)
                 }
                 abs.push(ab)
             }

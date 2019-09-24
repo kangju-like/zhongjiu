@@ -1,5 +1,5 @@
 var l = [{
-            "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280918332737800.png\") no-repeat",
+            "left_i": "background: url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280918332737800.png\") no-repeat;",
             "left_t": "白酒",
             "left_a": [
                 "茅台",
@@ -51,7 +51,7 @@ var l = [{
             "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091338113466590.jpg"
         },
         {
-            "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280918494822090.png\") no-repeat",
+            "left_i": "background: url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280918494822090.png\") no-repeat;",
             "left_t": "葡萄酒",
             "left_a": [
                 "拉菲",
@@ -95,7 +95,7 @@ var l = [{
             "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091354318083820.jpg"
         },
         {
-            "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280919080930420.png\") no-repeat",
+            "left_i": "background: url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280919080930420.png\") no-repeat;",
             "left_t": "洋酒",
             "left_a": [
                 "马爹利",
@@ -134,7 +134,7 @@ var l = [{
             "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091406164460190.jpg"
         },
         {
-            "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280919312902820.png\") no-repeat",
+            "left_i": "background: url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280919312902820.png\") no-repeat;",
             "left_t": "黄酒",
             "left_a": [
                 "尧喝货",
@@ -161,7 +161,7 @@ var l = [{
             "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201703091713216641350.jpg"
         },
         {
-            "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280919479355120.png\") no-repeat",
+            "left_i": "background: url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280919479355120.png\") no-repeat;",
             "left_t": "礼盒专区",
             "left_a": [
                 "五粮液五星级"
@@ -196,7 +196,7 @@ var l = [{
             "right_img": "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201708251457075503740.jpg"
         },
         {
-            "left_i": "url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280920068115450.png\") no-repeat",
+            "left_i": "background: url(\"http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201609280920068115450.png\") no-repeat;",
             "left_t": "婚庆专区",
             "left_a": [
                 "茅台",

@@ -12,6 +12,10 @@ a {
     color: #e3393c;
 }
 
+.block {
+    display: block !important;
+}
+
 input {
     -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
@@ -436,7 +440,7 @@ div {
     position: absolute;
     left: 200px;
     width: 780px;
-    top: 0;
+    top: 37px;
     border-top: 0;
     background: #fff;
     overflow: hidden;
@@ -594,7 +598,7 @@ div {
     margin: 0 auto;
 }
 
-.cont {
+.content_re {
     width: 1190px;
     overflow: hidden;
     margin-bottom: 30px;
@@ -603,6 +607,28 @@ div {
 
 .floor-title {
     margin: 20px 0 5px 0;
+}
+
+.floor-hdfirst {
+    margin-top: 20px;
+}
+
+.floor-hd2 {
+    height: 35px;
+    border-bottom: 1px solid #c9c9c9;
+    background-color: #fff;
+    margin-bottom: 4px;
+}
+
+.floor-hdfirst {
+    margin-top: 0;
+}
+
+.floor-hd {
+    height: 32px;
+    border-bottom: 1px solid #c9c9c9;
+    background-color: #fff;
+    margin-bottom: 4px;
 }
 
 .floor {
@@ -618,14 +644,20 @@ div {
     line-height: 30px;
 }
 
-.floor-title ul {
+.floor-hd ul {
+    float: right;
+    line-height: 32px;
+    margin-right: 20px;
+}
+
+.floor-hd2 ul {
     float: left;
     line-height: 35px;
     margin-right: 20px;
     margin-top: -2px;
 }
 
-.floor-title ul li.active {
+.floor-hd2 ul li.active {
     border-top: 2px solid #cc0000;
     border-bottom: 1px solid #fff;
     height: 35px;
@@ -634,11 +666,10 @@ div {
     background: #fff;
 }
 
-.floor-title ul li {
+.floor-hdfirst2 ul li {
     height: 35px;
     width: 185px;
     margin-left: 0;
-    margin-top: -30px;
     cursor: pointer;
     text-align: center;
     line-height: 35px;
@@ -649,38 +680,6 @@ div {
     border-bottom: 1px solid rgb(236, 236, 236);
     border-top: 2px solid rgb(236, 236, 236);
     background: rgb(249, 249, 249);
-}
-
-.baokuan ul {
-    width: 1206px;
-}
-
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!帮你选酒 !!!!!!!!!!!!!!!!!!!!!!*/
-
-.floor-hd {
-    height: 32px;
-    border-bottom: 1px solid #c9c9c9;
-    background-color: #fff;
-    margin-bottom: 4px;
-}
-
-.floor-hd h3 {
-    height: 18px;
-    width: 20%;
-    float: left;
-    line-height: 18px;
-    color: #3d4048;
-    font-size: 16px;
-    border-left: 4px solid #f00f34;
-    padding-left: 12px;
-    font-weight: bold;
-}
-
-.floor-hd ul {
-    float: right;
-    line-height: 32px;
-    margin-right: 20px;
 }
 
 .floor-hd ul li {
@@ -694,20 +693,58 @@ div {
     position: relative;
 }
 
-.floor-hd ul li s {
-    width: 10px;
-    height: 6px;
-    position: absolute;
-    top: 27px;
-    right: 42%;
-    background-image: url(https://www.zhongjiu.cn/Areas/Web/Images/himall_web_add.png);
-    background-repeat: no-repeat;
-    display: none;
+.content_recont {
+    overflow: hidden;
 }
 
-.floor-hd ul li.active s {
-    display: block;
+.content_recont ul {
+    width: 1206px;
 }
+
+.content_recont ul li {
+    float: left;
+    width: 230px;
+    height: 220px;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.content_recont ul li h3 {
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #333333;
+    padding-left: 0;
+    line-height: 20px;
+    height: 24px;
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+.content_recont ul li p {
+    padding-top: 5px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    color: #f00f34;
+    padding-left: 20px;
+}
+
+.content_recont ul li p span {
+    font-weight: bold;
+}
+
+.content_recont ul li img {
+    width: 230px;
+    height: 170px;
+    transition: all 0.3s;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!帮你选酒 !!!!!!!!!!!!!!!!!!!!!!*/
 
 .footer {
     width: 100%;

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <script>
+        var box = document.querySelector("#plist");
+        var lis = box.querySelectorAll("li");
+        var arr = [];
+        for (let i = 0; i < lis.length; i++) {
+            let o = {};
+            // let mg = lis[i].querySelector(".p-img img");
+            o.pimg = lis[i].querySelector(".p-img img").src;
+            o.price = lis[i].querySelector(".p-price strong").innerText;
+            o.math = lis[i].querySelector(".p-price b").innerText;
+            o.pname = lis[i].querySelector(".p-name a").innerText;
+            o.pshop = lis[i].querySelector(".p-shop-N .SN").innerText;
+            let imgs = lis[i].querySelectorAll(".scale-img img");
+            let ar = [];
+
+            for (let a = 0; a < imgs.length; a++) {
+                ar.push(imgs[a].src)
+            }
+            o.imgs = ar;
+            arr.push(o);
+
+        }
+        console.log(arr);
+    </script>
+</body>
+
+</html>

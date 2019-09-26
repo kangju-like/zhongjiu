@@ -79,12 +79,12 @@ $(function() {
                         <h3><a href="" target="_blank">${Rtab[2]}</a></h3>
                     </li>`)
                 })
-                let tb = `<ul class="content-right-tab" >${rtt.join("")}</ul>`
+                let tb = `<ul class="content-right-tab" style="display: none;" >${rtt.join("")}</ul>`
                 rt.push(tb)
             })
 
 
-            right_box.push(`<ul class="content-right-img" >
+            right_box.push(`<ul class="content-right-img" style="display: none;" >
             ${right_img.join("")}
             </ul>`)
             right_box.push(rt.join(""))
@@ -160,28 +160,82 @@ $(function() {
         $(".content").append(`<div class='ce'></div>`)
     }
     setFloor(fl);
-    console.log($('.floors .floor .floor-hd li'))
+    //旗舰店
+    function setShop(data) {
+        let res = []
+        $.each(data.content_img, function(index, e) {
+            let r = []
+            $.each(e, function(index, ele) {
+                r.push(`
+                <li>
+                <a href="" title="茅台" target="_blank"><img class="lazyload" src="${ele}" alt=""></a>
+            </li>
+                `)
+            })
+            res.push(`<div class="scroll-brand clearfix" style="left: 0px;">
+            <ul>
+                ${r.join("")}
+            </ul>
+        </div>`)
+        })
+        $(".Brand-shop").append(`<div class="BD-content">
+        <div class="BD-left">
+            <a href="h" target="_blank"><img class="lazyload" src="${data.left_img}"></a>
+        </div>
+        <div class="BD-mid">
+            <b class="bd-prev"></b>
+            <b class="bd-next"></b>
+            <div class="BD-wrap">
+                <div class="scroll-wrap">
+                    ${res.join("")}    
+                </div>
+            </div>
+        </div>
+        <div class="BD-right" name="__bdright">
+            <a href="" target="_blank"><img class="lazyload" src="${data.right_img}"></a>
+        </div>
+    </div>`)
+    }
+    setShop(footer)
+        //楼层tab卡效果
+    let all = document.querySelectorAll(".floors .floor")
 
-    //楼层tab卡效果
 
-    let lis = document.querySelectorAll(".floors .floor .floor-hd li")
-    let s = document.querySelectorAll(".floors .floor .floor-hd li s")
-    let uls = document.querySelectorAll(".floors .floor .floor-bd .content-right-box ul")
-    $(s[0]).addClass("block");
-    $(uls[0]).addClass("block");
-    for (let i = 0; i < lis.length - 1; i++) {
-        console.log(lis[i]);
+    for (let i = 0; i < all.length; i++) {
 
-        $(lis[i]).mouseenter(function() {
-                $(s[i]).addClass("block");
-                $(uls[i]).removeClass("block");
-                $(uls[i]).addClass("block");
-                console.log(this);
+
+        let liss = all[i].querySelectorAll(".floor-hd li")
+        let ss = all[i].querySelectorAll(".floor-hd li s")
+        let uls = all[i].querySelectorAll(".floor-bd .content-right-box ul")
+        $(ss[0]).addClass("block");
+        $(uls[0]).addClass("block");
+        for (let r = 0; r < liss.length - 1; r++) {
+            // console.log(lis[r])
+            $(liss[r]).mouseenter(function() {
+                // console.log($(ss[r]).parents("ul").siblings("ul").find('s'))
+
+                // $(ss[r]).parents("ul").siblings('ul').find('s').removeClass('block')
+                // $(ss[r]).addClass("block");
+                $(uls[r]).addClass("block");
+                $(uls[r]).siblings().removeClass("block");
+
+
 
             })
-            // $(lis[i]).mouseleave(function() {
-            //     $(s[i]).removeClass("block");
-            //     $(uls[i]).removeClass("block");
-            // })
+        }
+
     }
+    //楼层导航
+    function scroll(e) {
+        window.scrollTo(0, e - 200)
+    }
+    let scroll_to = document.querySelectorAll(".floor-nav ul li");
+    for (let i = 0; i < scroll_to.length; i++) {
+        $(scroll_to[i]).click(function() {
+            scroll(all[i].offsetTop)
+
+
+        })
+    }
+
 })

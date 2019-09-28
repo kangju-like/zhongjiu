@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/homeval.js"></script>
+    <script src="../js/homeand.js"></script>
+    <link rel="stylesheet" href="../css/xq.css">
+    <script src="../js/xq.js"></script>
+    <link href="../css/jquery.exzoom.css" rel="stylesheet" type="text/css" />
+    <script src="../js/rightCar.js"></script>
+
+</head>
+
+<body>
+    <div class="top">
+        <div class="top-c"><span class="hello">你好， 欢迎来到  <span class="zjj">中酒网！</span><a class="top-link" href="">去首页</a></span>
+            <ul class="top-center">
+                <li class="dl">
+                    <a href="">请登录</a>
+                </li>
+                <li>
+                    <a href="">免费注册</a>
+                </li>
+            </ul>
+            <ul class="quick_list">
+                <li>
+                    <a href="" class="dropdown">我的中酒网<b></b></a>
+                </li>
+                <li>
+                    <a href="">购物车0件</a>
+                </li>
+                <li class="dropdown">
+                    <a href="">微信端</a>
+                </li>
+                <li class="dropdown">
+                    <a href="">APP</a>
+                </li>
+                <li class="dropdown">
+                    <a href="">卖家中心<b></b></a>
+                </li>
+                <li class="dropdown">
+                    <a href="">订购热线：400-798-9999</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header">
+        <div class="head-box">
+            <div class="logo">
+                <a href="/">
+                    <img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/Site/logo.png" alt="Himall">
+                </a>
+            </div>
+            <div class="gif">
+                <a href="" target="_blank">
+                    <img src="http://img5.zhongjiu.cn/pro/dt/gif.gif">
+                </a>
+            </div>
+            <div class="top-head-ad">
+                <a href=""><img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/ImageAd/201802011650389711990.jpg" width="160" height="80"></a>
+            </div>
+            <div class="search">
+                <div class="search-form cl">
+                    <ul>
+                        <li>商品</li>
+                        <li>店铺</li>
+                    </ul>
+                    <label>商品</label>
+                    <div class="twitter-typeahead" style="display: inline-block; direction: ltr;"><input type="text" id="searchBox" class="text tt-input" style="float: none; position: relative;" name="" value="" placeholder="天佑德" autocomplete="off" spellcheck="false" dir="auto"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: nowrap; font-family: tahoma, Arial, &quot;microsoft yahei&quot;, SimSun; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+                        <div class="tt-dropdown-menu" style="position: absolute; top: 110%; left: -3px; z-index: 10000; display: none; right: auto;">
+                            <div class="tt-dataset-0"></div>
+                        </div>
+                    </div>
+                    <input type="button" id="searchBtn" class="button" value="搜索">
+                </div>
+                <div class="hot-search">
+
+                    <a href="" class="active">西凤</a>
+                    <a href="">青稞酒</a>
+                    <a href="">洋河</a>
+                    <a href="">习酒</a>
+                    <a href="">小糊涂仙</a>
+                    <a href="">酒鬼酒</a>
+                    <a href="">张裕</a>
+                    <a href="">拉菲</a>
+                    <a href="">董酒</a>
+                    <a href="">华夏长城</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <div class="nav-content">
+            <div class="categorys">
+
+
+            </div>
+            <ul class="nav cl">
+
+                <li class="_banner cur" id="homePage" index=""><a href="/">首页</a></li>
+                <li class="_banner"><a target="_blank" href="">白酒专区</a></li>
+                <li class="_banner"><a target="_blank" href="">天佑德青稞酒</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="right-side">
+        <div class="right-side-menu">
+            <ul class="menu-top">
+                <li data-tag="user">
+                    <i class="user" id="right_userCenter"><s></s></i>
+                    <span>个人中心</span>
+                </li>
+                <s></s>
+                <li data-tag="cart" arrow="" class="side-cart" id="right_cart">
+                    <i class="cart"><s></s></i>
+                    <p>购物车</p>
+                    <em>0</em>
+                </li>
+                <s></s>
+                <li data-tag="asset" arrow="" id="right_asset">
+                    <i class="asset"><s></s></i>
+                    <span style="display: none; right: 60px; opacity: 0;">资产中心</span>
+                    <div class="side-point">
+                        该店铺可领优惠券<br>
+                        <a>立即领取</a>
+                    </div>
+                </li>
+                <li data-tag="at-goods" arrow="" id="right_goods">
+                    <i class="at-goods"><s></s></i>
+                    <span style="display: none; right: 60px; opacity: 0;">关注商品</span>
+                </li>
+                <li data-tag="history" arrow="" id="right_history">
+                    <i class="history"><s></s></i>
+                    <span style="display: none; right: 60px; opacity: 0;">浏览历史</span>
+                </li>
+
+            </ul>
+            <ul class="menu-bot">
+                <li>
+                    <i class="go-top"></i>
+                    <span style="display: none; right: 60px; opacity: 0;">返回顶部</span>
+                </li>
+            </ul>
+        </div>
+        <div class="side-content" style="display: none;">
+            <div class="side-cart-c">
+                <div class="side-bd">
+                    <input type="hidden" value="2" id="hidAuditStatus">
+                    <input type="hidden" value="1" id="hidSaleStatus">
+                    <div class="cart-top">
+                        <label><input type="checkbox" name="s-checkAll" checked="">全选</label>
+                        <a href="/cart/cart" title="">查看全部</a>
+                    </div>
+                    <div class="cart-list" tabindex="5000" style="height: 234px; overflow: hidden; outline: none;">
+                        <ul id="side-cart-list">
+                            <li>
+                                <div class="cart-list-shop cl"> <input class="shopSelect" type="checkbox" value="1" name="checkShop" checked="">
+                                    <p><a href="/shop/home/1" target="_blank">中酒自营</a></p> <span class="cart-shop-price" data-shoprice="1452.00">1452.00</span> </div>
+                                <!-- <div class="cart-list-goods cl"> <input class="checkbox" type="checkbox" data-cartid="29262" name="checkItem" value="1" checked="">
+                                    <a href="/productdetail/2536.htm" title="澳洲黄尾袋鼠珍藏霞多丽白葡萄酒 750ml" target="_blank"><img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Shop/1/Products/2536/1_50.png" alt=""></a>
+                                    <div class="s-num"><span>3</span></div>
+                                    <div class="s-g-price">555.00</div>
+                                </div>
+                                <div class="cart-list-goods cl"> <input class="checkbox" type="checkbox" data-cartid="29263" name="checkItem" value="1" checked="">
+                                    <a href="/productdetail/3302.htm" title="【礼盒】澳洲杰卡斯经典系列梅洛干红葡萄酒 750ml*2" target="_blank"><img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Shop/1/Products/3302/1_50.png" alt=""></a>
+                                    <div class="s-num"><span>3</span></div>
+                                    <div class="s-g-price">897.00</div>
+                                </div> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="side-bt">
+                    <div class="cart-total">
+                        <span class="total-money">￥<em id="s-total-money">1452.00</em></span>
+                        <span class="total-num">已选<em id="s-total-num">6</em>件</span>
+                    </div>
+                    <input type="button" id="toSubmitOrder" value="购物车结算">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="bg-g">
+        <div id="catePath" class="w">
+            <div class="breadcrumb"><strong><a href="/list/1-0-0-1-1-1.htm">全部</a></strong><span>&nbsp;&gt;&nbsp;<a href="/list/101-0-0-1-1-1.htm">葡萄酒</a>&nbsp;&gt;&nbsp;<a href="/list/101-457-0-1-1-1.htm">黄尾袋鼠</a>&nbsp;&gt;&nbsp;<a>澳洲黄尾袋鼠珍藏霞多丽白葡萄酒 750ml</a></span></div>
+        </div>
+        <div class="w">
+            <div id="product-intro">
+                <div id="name">
+                    <h1>澳洲黄尾袋鼠珍藏霞多丽白葡萄酒 750ml</h1>
+                    <strong></strong>
+                </div>
+                <!--限时购预热-->
+                <div id="limitbuyyure">
+                </div>
+                <div class="cl">
+                    <ul id="summary">
+                        <li id="summary-price">
+                            <div class="t position-r">
+                                <div class="dt dt01">价格</div>
+                                <strong class="p-price brnone dt" style="width:123px;">￥ <b id="jd-price">185.00</b></strong>
+                                <div id="vipPrice">
+
+
+
+                                </div>
+                                <script type="text/html" id="vipPrice_template">
+                                    {{if isLogin}} {{if isVipPrice}}
+                                    <strong class="zj-vip dt">￥<b id="zj-vip-price">{{vipPrice}}</b>{{priceTypeTxt}}专享价</strong> {{/if}} {{else}} {{if isExistVipPriceOrExistVipDiscounted}}
+                                    <a href='/Login?returnUrl=/productdetail/{{pid}}.htm' style='font-size:13px;color:#f18918;margin-top:2px;width:200px;text-align:left;'>登录后查看会员价</a> {{/if}} {{/if}}
+                                </script>
+
+                                <div class="qrcode-boxs">
+                                    <div class="qrcode-bar" style="height: 26px;">
+                                        <img src="https://www.zhongjiu.cn/Areas/Web/Images/icon-qrcode.png" alt="二维码"><span class="text">手机购买</span><span class="qrcode-arrow-down"></span>
+                                    </div>
+                                    <div class="qrcode-detail" style="top: 26px; height: 0px;">
+                                        <div id="code"><canvas width="82" height="82"></canvas></div>
+                                        <p>手机购买优惠多</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="b">
+                                <div class="b-01 dt">销量 &nbsp;&nbsp;<a id="saleCounts">105瓶</a></div>
+                                <div class="b-01 dt">评价 &nbsp;&nbsp;<a id="Comments" href="#comment">1</a></div>
+                                <div class="dt b-02">评分：</div>
+                                <div class="dt summary-grade" style="margin-right:10px">
+                                    <span class="star sa5"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="productFeight" style="display: block;">
+                            <div class="dt">运费：</div>
+                            <div class="dt">
+                                <div id="feightPrice">￥ 0</div>
+                            </div>
+                        </li>
+                        <li id="summary-promotion" style="display:block;">
+                            <div class="dt l l01">促销</div>
+                            <div class="promotion-l" style="float:left;width:440px;">
+                                <div style="margin-bottom:5px; "><em class="hl_red_bg">满免</em><em class="hl_red">满<span>39.00</span>免运费</em></div>
+                                <div id="buygift"></div>
+                                <div id="fullgift"></div>
+                                <div id="FullSubtraction"></div>
+                                <div id="shopbonus"></div>
+                            </div>
+                        </li>
+                        <li id="summary-service">
+                            <div class="dt l">库存</div>
+                            <div class="dd d03">
+                                <span id="stockProductImage" style="float:left;">有货</span>
+                                <b id="stockProduct" style=" display:none;">39.000</b>
+                            </div>
+                        </li>
+                        <li id="summary-service" style="width: 540px;">
+                            <div class="dt l" style="line-height: 26px;">物流</div>
+                            <div class="dd special">
+                                <span>配送至</span> &nbsp; <a class="address-choose" id="addressChoose" data-select="642,643,648">北京 北京市 朝阳区</a><span id="isCashOnDelivery">&nbsp;| &nbsp;支持货到付款</span>
+                            </div>
+                        </li>
+                        <li id="service" style="width:540px;">
+                            <div class="dt l" style="line-height: 26px;">服务</div>
+                            <div class="dd d03">
+                                <span style="float:left;">由 <a href="/shop/home/1" target="_blank">中酒自营</a> 从北京发货，并提供售后服务</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--summary end-->
+                    <div id="brand-bar-pop">
+                        <dl id="seller" style="border-top:3px solid #ff4d50; padding-left:0; text-align:center;">
+                            <a href="/brand/457.htm" target="_blank"> <img alt="黄尾袋鼠" title="黄尾袋鼠" width="100" height="100%" src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Plat/Brand/logo_457.jpg" onerror="javascript: this.src = '/Images/onerror.jpg'; ">
+                                <p style="font-size:12px;">黄尾袋鼠</p>
+                            </a>
+                        </dl>
+                        <dl style="padding:15px 0 15px 10px;border-bottom: 1px dashed #ccc8c8;border-top: 1px solid #ccc8c8;"><dt style="color:#fff;background-color:#ff4d50; padding:2px 10px;font-size:14px;">自营</dt><span style="font-size:16px;margin-left:40px;"><a href="/shop/home/1">中酒自营店</a></span></dl>
+                        <dl id="hotline">
+                            <dd>
+                                <a target="_blank" href="" title="欣欣">
+                                    <img border="0" src="http://wpa.qq.com/pa?p=2:3060023943:4">&nbsp;在线客服
+                                </a>
+                            </dd>
+                        </dl>
+                        <h3>服务支持：</h3>
+                        <dl class="pop-ensure"><dt><img src="https://www.zhongjiu.cn/Images/newTimelyDelivery.png"> 及时发货</dt></dl>
+                        <dl class="pop-ensure"><dt><img src="https://www.zhongjiu.cn/Images/genuine-product.png"> 正品保证</dt></dl>
+                        <dl class="pop-ensure"><dt><img src="https://www.zhongjiu.cn/Images/professional-services.png"> 专业一对一服务</dt></dl>
+                        <dl class="pop-ensure"><dt><img src="https://www.zhongjiu.cn/Images/change-a-purchase.png">七天无理由退换</dt></dl>
+                    </div>
+                    <!--其他店面-->
+                    <!--brand-bar-pop-->
+                    <ul id="choose" class="choose">
+                        <li id="choose-amount" style="line-height: 26px;">
+                            <div class="dt l">数量</div>
+                            <div class="dd">
+                                <div class="wrap-input">
+                                    <a class="btn-reduce" href="javascript:;">-</a>
+                                    <a class="btn-add" href="javascript:;">+</a>
+                                    <input class="text quantity-text" id="buy-num" value="1" onblur="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'1'); if(this.value==''){this.value='1'}}).call(this)">
+                                </div>
+                            </div>
+                        </li>
+                        <li id="choose-result">
+                            <div class="dt"></div>
+                            <div class="dd"><strong></strong><strong></strong></div>
+                        </li>
+                        <li id="choose-btns">
+                            <div id="choose-btn-buy" class="btn">
+                                <a class="btn-append btn-order-now" name="OrderNow" id="OrderNow"><img src="https://www.zhongjiu.cn/Areas/Web/Images/lijig.png" style="width:25px;margin-bottom:-5px;height:25px;margin-top:13px;margin-right:5px;">立即购买</a>
+                            </div>
+                            <div id="choose-btn-append" class="btn">
+                                <a class="btn-append" id="InitCartUrl" name="InitCartUrl" style="margin-left:40px;"> <img src="https://www.zhongjiu.cn/Areas/Web/Images/gou.png" style="width:25px;height:25px;margin-top:11px;
+                                margin-bottom:-5px;margin-right:5px;">加入购物车</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--choose end-->
+                    <span class="clr"></span>
+                </div>
+                <div id="pre">
+                    <div class="exzoom" id="exzoom">
+                        <!--大图区域-->
+                        <div class="exzoom_img_box">
+                            <ul class="exzoom_img_ul">
+                                <li><img id="mgs" src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Shop/1/Products/2536/2_350.png" /></li>
+                                <li><img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Shop/1/Products/2536/1_350.png" /></li>
+                                <!-- <li><img src="../img/a3.png" /></li>
+                                <li><img src="../img/a4.png" /></li>
+                                <li><img src="../img/a5.png" /></li>
+                                <li><img src="../img/a1.png" /></li>
+                                <li><img src="../img/a2.png" /></li>
+                                <li><img src="../img/a3.png" /></li> -->
+                            </ul>
+                        </div>
+                        <!--缩略图导航-->
+                        <div class="exzoom_nav"></div>
+                        <!--控制按钮-->
+                        <p class="exzoom_btn"> <a href="javascript:void(0);" class="exzoom_prev_btn"> &lt; </a> <a href="javascript:void(0);" class="exzoom_next_btn"> &gt; </a> </p>
+                    </div>
+                </div>
+
+                <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+                <script src="../js/jquery.exzoom.js"></script>
+                <script type="text/javascript">
+                    $("#exzoom").exzoom({
+                        autoPlay: false,
+                    }); //方法调用，务必在加载完后执行
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

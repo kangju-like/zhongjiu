@@ -225,6 +225,24 @@ $(function() {
         }
 
     }
+    // 购物车***************************************
+    $.ajax({
+        type: "get",
+        url: "../server/bycar.php",
+        // data: "data",
+        dataType: "json",
+        success: function(response) {
+            console.log(response);
+            let pnum = 0;
+            $.each(response.res, function(index, ele) {
+                pnum += (ele.num * 1)
+                console.log(ele.num);
+
+            })
+            $("#right_cart em").text(pnum)
+
+        }
+    });
     //楼层导航
     function scroll(e) {
         window.scrollTo(0, e - 200)

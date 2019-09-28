@@ -12,6 +12,7 @@
     <script src="../js/homeand.js"></script>
     <script src="../js/shopval.js"></script>
     <script src="../js/shop.js"></script>
+    <script src="../js/rightCar.js"></script>
 </head>
 
 <body>
@@ -143,6 +144,45 @@
                     <span style="display: none; right: 60px; opacity: 0;">返回顶部</span>
                 </li>
             </ul>
+        </div>
+        <div class="side-content" style="display: none;">
+            <div class="side-cart-c">
+                <div class="side-bd">
+                    <input type="hidden" value="2" id="hidAuditStatus">
+                    <input type="hidden" value="1" id="hidSaleStatus">
+                    <div class="cart-top">
+                        <label><input type="checkbox" name="s-checkAll" checked="">全选</label>
+                        <a href="/cart/cart" title="">查看全部</a>
+                    </div>
+                    <div class="cart-list" tabindex="5000" style="height: 234px; overflow: hidden; outline: none;">
+                        <ul id="side-cart-list">
+                            <li>
+                                <div class="cart-list-shop cl"> <input class="shopSelect" type="checkbox" value="1" name="checkShop" checked="">
+                                    <p><a href="/shop/home/1" target="_blank">中酒自营</a></p> <span class="cart-shop-price" data-shoprice="1452.00">1452.00</span> </div>
+                                <!-- <div class="cart-list-goods cl"> <input class="checkbox" type="checkbox" data-cartid="29262" name="checkItem" value="1" checked="">
+                                    <a href="/productdetail/2536.htm" title="澳洲黄尾袋鼠珍藏霞多丽白葡萄酒 750ml" target="_blank"><img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Shop/1/Products/2536/1_50.png" alt=""></a>
+                                    <div class="s-num"><span>3</span></div>
+                                    <div class="s-g-price">555.00</div>
+                                </div>
+                                <div class="cart-list-goods cl"> <input class="checkbox" type="checkbox" data-cartid="29263" name="checkItem" value="1" checked="">
+                                    <a href="/productdetail/3302.htm" title="【礼盒】澳洲杰卡斯经典系列梅洛干红葡萄酒 750ml*2" target="_blank"><img src="http://img6.zhongjiu.cn/resourceb2b2c//Storage/Shop/1/Products/3302/1_50.png" alt=""></a>
+                                    <div class="s-num"><span>3</span></div>
+                                    <div class="s-g-price">897.00</div>
+                                </div> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="side-bt">
+                    <div class="cart-total">
+                        <span class="total-money">￥<em id="s-total-money">1452.00</em></span>
+                        <span class="total-num">已选<em id="s-total-num">6</em>件</span>
+                    </div>
+                    <input type="button" id="toSubmitOrder" value="购物车结算">
+                </div>
+            </div>
+
+
         </div>
     </div>
     <div class="w main">
@@ -426,16 +466,7 @@
                     </div>
 
                 </div>
-                <div class="m clearfix" id="bottom_pager">
-                    <div id="pagin-btm" class="pagin fr">
-                        <a class="prev-disabled">上一页</a><a class="current" href="/list/101-0-1041-1-1-1.htm">1</a><a class="next-disabled">下一页</a><span class="page-skip">
-                            <em>&nbsp;&nbsp;共 </em><em id="pageCount">1</em><em>&nbsp;页&nbsp;&nbsp;&nbsp;&nbsp;到第</em>
-                            <input class="jumpto" type="text" value="1" id="jumpInput">
-                            <em>页</em>
-                            <a class="btn-skipsearch" id="pageJumpList" href="javascript:;">确定</a>
-                        </span>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

@@ -18,7 +18,27 @@
             let o = {};
             // let mg = lis[i].querySelector(".p-img img");
             o.pimg = lis[i].querySelector(".p-img img").src;
-            o.price = lis[i].querySelector(".p-price strong").innerText;
+            var s = o.pimg.split('/');
+            o.sid = s[9];
+            var simg = [];
+            var p = o.pimg;
+            var r1 = p.split('/');
+            r1[10] = '2_220.png';
+            s1 = r1.join("/")
+
+            var r2 = p.split('/');
+            r2[10] = '3_220.png';
+            s2 = r2.join("/")
+
+            var r3 = p.split('/');
+            r3[10] = '4_220.png';
+            s3 = r3.join("/")
+            var r4 = p.split('/');
+            r4[10] = '4_220.png';
+            s4 = r4.join("/")
+
+            price = lis[i].querySelector(".p-price strong").innerText;
+            o.price = price.slice(1)
             o.math = lis[i].querySelector(".p-price b").innerText;
             o.pname = lis[i].querySelector(".p-name a").innerText;
             o.pshop = lis[i].querySelector(".p-shop-N .SN").innerText;

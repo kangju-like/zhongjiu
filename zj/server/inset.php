@@ -25,7 +25,7 @@ for($i = 0;$i<count($arrData);$i++)
     $imgs= implode(",",$img);
 echo($imgs);
   $sql = "INSERT INTO `shop` (`id`, `pimg`, `price`, `math`, `pname`, `pshop`,`imgs`) 
-VALUES (NULL,jk'$pimg', '$price', $math, '$pname', '$pshop','$imgs');";
+VALUES (NULL,'$pimg', '$price', $math, '$pname', '$pshop','$imgs');";
   mysqli_query($db, $sql);
 }
 // print_r($db)

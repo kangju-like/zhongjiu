@@ -11,25 +11,27 @@ $(function() {
     function setShop(data) {
         var r = []
         $.each(data, function(index, e) {
+            // console.log(e);
             var Imgs = []
-            $.each(e.imgs, function(index, ele) {
+            $.each(JSON.parse(e.imgs), function(index, ele) {
                 // console.log(ele);
 
                 Imgs.push(`<a href="">
                 <img class="lazyload" src="${ele}">
             </a>`)
             })
+
             r.push(`
-            <li class="clearfix">
+            <li class="clearfix" name="${e.sid}">
             <div class="lh-wrap">
                 <div class="p-img">
-                    <a target="_blank" href="">
+                    <a target="_blank" name="${e.sid}" href="../html/xq.html?id=${e.sid}">
                         <img class="lazyload" src="${e.pimg}" title="">
                     </a>
                     <div shop_id="0"></div>
                 </div>
                 <div class="p-price">
-                    <strong>${e.price}</strong>
+                    <strong>￥${e.price}</strong>
 
                     <label style="float:right" id="lblOrderCount_3302">成交 <b> ${e.math} </b>笔</label>
                 </div>
@@ -55,27 +57,62 @@ $(function() {
         </ul>
     </div>`)
     }
-    setShop(shops);
-    $(".clearfix").mouseenter(function() {
-        $(this).find(".scale-img").addClass("block");
-        $(this).find(".shop-cart").addClass("block");
-        // $(this).siblings().find('.scale-img').removeClass("block")
-        // $(this).siblings().find('.shop-cart').removeClass("block")
-    })
-    $(".clearfix").mouseleave(function() {
-            $(this).find('.scale-img').removeClass("block")
-            $(this).find('.shop-cart').removeClass("block")
-        })
-        // $(".scale-img img").mouseenter(function() {
-        //         $(this).parents(".scale-img").siblings('.lh-wrap').find('img').get(0).src = this.src;
-        //         // console.log($(this).parents(".scale-img").siblings('.lh-wrap').find('img').get(0).src);
-        //         console.log(this.index)
-        //         var reg = /^\/[0-5]_[0-9]{3}.png$/
-        //         var res = '/2_220.png'
-        //         console.log(reg.test(res))
-        //         let str = "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Shop/96/Products/103151/2_220.png";
-        //         str.replace(/^\/[0-9]_$/g, "/2_368.png");
-        //         console.log(str);
+
+    $.ajax({
+        type: "get",
+        url: "../server/select.php",
+
+        dataType: "json",
+        success: function(response) {
+            console.log(response)
+            setShop(response.res);
+            $(".clearfix").mouseenter(function() {
+                $(this).find(".scale-img").addClass("block");
+                $(this).find(".shop-cart").addClass("block");
+                // $(this).siblings().find('.scale-img').removeClass("block")
+                // $(this).siblings().find('.shop-cart').removeClass("block")
+            })
+            $(".clearfix").mouseleave(function() {
+                $(this).find('.scale-img').removeClass("block")
+                $(this).find('.shop-cart').removeClass("block")
+            })
+        },
+
+
+
+    });
+    // 购物车***************************************
+    $.ajax({
+        type: "get",
+        url: "../server/bycar.php",
+        // data: "data",
+        dataType: "json",
+        success: function(response) {
+            console.log(response);
+            let pnum = 0;
+            $.each(response.res, function(index, ele) {
+                pnum += (ele.num * 1)
+                console.log(ele.num);
+
+            })
+            $("#right_cart em").text(pnum)
+
+        }
+    });
+    // $(".scale-img img").mouseenter(function() {
+    //         $(this).parents(".scale-img").siblings('.lh-wrap').find('img').get(0).src = this.src;
+    //         // console.log($(this).parents(".scale-img").siblings('.lh-wrap').find('img').get(0).src);
+    //         $.each($(this).parents(".scale-img").find("img"), function(index, ele) {
+    //                 console.log(ele);
+
+    //             })
+    //             // console.log(this.index)
+    //             // var reg = /^\/[0-5]_[0-9]{3}.png$/
+    //             // var res = '/2_220.png'
+    //             // console.log(reg.test(res))
+    //             // let str = "http://img6.zhongjiu.cn/resourceb2b2c//Storage/Shop/96/Products/103151/2_220.png";
+    //             // str.replace(/^\/[0-9]_$/g, "/2_368.png");
+    //             // console.log(str);
 
 
 

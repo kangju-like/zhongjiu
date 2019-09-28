@@ -16,6 +16,15 @@ a {
     display: block !important;
 }
 
+
+/* body{background-color: #212121} */
+
+#exzoom {
+    width: 400px;
+    /*height: 400px;*/
+    margin: 20px auto;
+}
+
 input {
     -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
@@ -1687,4 +1696,195 @@ user agent stylesheet a:-webkit-any-link {
 .beian a img {
     width: 100%;
     height: 100%;
+}
+
+
+/* ******************侧边购物车******************* */
+
+.side-cart-c {
+    position: relative;
+    height: 100%;
+    background-color: #e6e6e6;
+    /* display: flex; */
+    width: 220px;
+    flex-direction: column-reverse;
+}
+
+.side-content .side-bd {
+    position: relative;
+}
+
+.side-bd .cart-top {
+    height: 28px;
+    line-height: 28px;
+    background-color: #e6e6e6;
+}
+
+.side-bd .cart-top label {
+    margin-left: 13px;
+}
+
+.side-bd .cart-top label input {
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+input {
+    font: 12px/1.5 tahoma, Arial, 'microsoft yahei', 'SimSun';
+}
+
+.side-bd .cart-top a {
+    float: right;
+    margin-right: 18px;
+}
+
+.side-bd .cart-list li:first-child {
+    margin: 0;
+}
+
+.side-bd .cart-list li {
+    padding-left: 8px;
+    margin-top: 16px;
+    background-color: #fff;
+}
+
+.cart-list .cart-list-shop {
+    height: 29px;
+    line-height: 18px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.cart-list .cart-list-shop input[type="checkbox"] {
+    margin: 7px 5px;
+    float: left;
+}
+
+input {
+    font: 12px/1.5 tahoma, Arial, 'microsoft yahei', 'SimSun';
+}
+
+.cart-list .cart-list-shop p {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 5px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #333;
+    width: 119px;
+    float: left;
+}
+
+.cart-list .cart-list-shop span {
+    color: #999;
+    text-align: right;
+    padding: 5px 0;
+    width: 60px;
+    float: right;
+    border-bottom: 1px solid #e6e6e6;
+    margin-right: 10px;
+}
+
+.cl:after,
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.cart-list .cart-list-goods {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.cl,
+.clearfix {
+    zoom: 1;
+}
+
+.cart-list-goods input[type="checkbox"] {
+    margin: 20px 5px 5px;
+    float: left;
+}
+
+.cart-list-goods .s-num {
+    float: left;
+    width: 59px;
+    text-align: center;
+    margin-top: 21px;
+    line-height: 14px;
+}
+
+.cart-list-goods .s-num span {
+    padding: 0 6px;
+    line-height: 18px;
+    background-color: #E05558;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.cart-list-goods .s-g-price {
+    float: left;
+    width: 60px;
+    float: left;
+    text-align: right;
+    line-height: 18px;
+    padding-top: 19px;
+}
+
+.side-cart-c .side-bt {
+    bottom: 20px;
+    left: 0;
+    padding: 0 15px;
+    width: 190px;
+    position: absolute;
+    background-color: #e6e6e6;
+}
+
+.side-cart-c .cart-total {
+    color: #333;
+    line-height: 30px;
+}
+
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
+
+.cart-list-goods img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    float: left;
+}
+
+.side-cart-c .side-bt input[type="button"] {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #e3393c;
+    border: 0 none;
+    cursor: pointer;
+}
+
+.side-cart-c .cart-total .total-money {
+    float: right;
+    color: #e3393c;
+}
+
+.side-cart-c .cart-total {
+    color: #333;
+    line-height: 30px;
 }

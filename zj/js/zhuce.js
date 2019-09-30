@@ -5,50 +5,72 @@ $(function() {
     let msgCodeBtn = $("#msgbtn");
     let msgCodeInput = $("#msgcord")
     let phoneReg = /^1[3-9]\d{9}$/; /* 第一位：1 第二位不能为012 11位数字 */
-    let passwordReg = /^[a-zA-Z0-9]{6,16}$/;
+    let passwordReg = /^[a-zA-Z0-9]|\S{6,16}$/;
+    let num;
+    let bs = false;
+    let SlideVerifyPlug = window.slideVerifyPlug;
+    let slideVerify = new SlideVerifyPlug('#verify-wrap', {
+        wrapWidth: '272', //设置 容器的宽度 ,不设置的话，会设置成100%，需要自己在外层包层div,设置宽度，这是为了适应方便点；
+        initText: '请按住往右滑', //设置  初始的 显示文字
+        sucessText: '验证通过', //设置 验证通过 显示的文字
+        getSuccessState: function(res) {
+            //当验证完成的时候 会 返回 res 值 true，只留了这个应该够用了 
 
+            bs = res;
+            console.log(bs);
+        }
+    });
+
+
+
+    var slideVerify2 = new SlideVerifyPlug('#verify-wrap2', {
+        initText: '请按住滑块',
+        sucessText: '验证通过',
+
+    });
     phone_input.blur(function() {
         /* 先获取输入框的值，检查和清理(空格|空) */
         let val = $(this).val().trim();
-        console.log(val.length);
+        // console.log(val.length);
 
         if (val.length == 0) {
-            $(this).parents(".phval").next().addClass("block")
-            $(this).parents(".phval").next().next().removeClass("block");
+            $(this).parents(".phone-box").find("#Phone_error").addClass("block").text("手机号不能为空")
+            $(this).parents(".phone-box").find("#Phone_active").removeClass("block")
         } else {
             if (!phoneReg.test(val)) {
-                $(this).parents(".phval").next().addClass("block")
-                $(this).parents(".phval").next().next().removeClass("block");
+                $(this).parents(".phone-box").find("#Phone_error").addClass("block").text("手机号码不正确")
+                $(this).parents(".phone-box").find("#Phone_active").removeClass("block");
 
             } else {
-                $(this).parents(".phval").next().removeClass("block");
+                $(this).parents(".phone-box").find("#Phone_error").removeClass("block");
+                $(this).parents(".phone-box").find("#Phone_active").removeClass("block");
             }
         }
     })
     phone_input.focus(function() {
-        $(this).parents(".phval").next().next().addClass("block");
+        $(this).parents(".phone-box").find("#Phone_error").addClass("block").text("请输入手机号码");
     });
     passwordAInput.blur(function() {
         /* 先获取输入框的值，检查和清理(空格|空) */
         let val = $(this).val().trim();
-        console.log(val.length);
+        // console.log(val.length);
 
         if (val.length == 0) {
-            $(this).parents(".pasval").next().addClass("block")
-            $(this).parents(".pasval").next().next().removeClass("block");
+            $(this).parents(".pas-box").find("#pwd_error").addClass("block")
+            $(this).parents(".pas-box").find("#pwd_info").removeClass("block");
         } else {
             if (!passwordReg.test(val)) {
-                $(this).parents(".pasval").next().addClass("block")
-                $(this).parents(".pasval").next().next().removeClass("block");
+                $(this).parents(".pas-box").find("#pwd_error").addClass("block")
+                $(this).parents(".pas-box").find("#pwd_info").removeClass("block");
 
             } else {
-                $(this).parents(".pasval").next().removeClass("block");
-                $(this).parents(".pasval").next().next().removeClass("block");
+                $(this).parents(".pas-box").find("#pwd_error").removeClass("block")
+                $(this).parents(".pas-box").find("#pwd_info").removeClass("block");
             }
         }
     })
     passwordAInput.focus(function() {
-        $(this).parents(".pasval").next().next().addClass("block");
+        $(this).parents(".pas-box").find("#pwd_info").addClass("block");
     });
     passwordBInput.blur(function() {
         /* 先获取输入框的值，检查和清理(空格|空) */
@@ -57,29 +79,29 @@ $(function() {
 
         let val = $(this).val().trim();
         if (val.length == 0) {
-            $(this).parents(".passval").next().addClass("block").text("确认密码不能为空！")
-            $(this).parents(".passval").next().next().removeClass("block");
+            $(this).parents(".pass-box").find("#pwdRepeat_error").addClass("block").text("确认密码不能为空！")
+            $(this).parents(".pass-box").find("#pwdRepeat_info").removeClass("block");
         } else {
-            if (passwordVal != val) {
-                $(this).parents(".passval").next().addClass("block").text("两次密码不一致！")
-                $(this).parents(".passval").next().next().removeClass("block");
+            if ($("#passwordA").val() != val) {
+                $(this).parents(".pass-box").find("#pwdRepeat_error").addClass("block").text("两次密码不一致！")
+                $(this).parents(".pass-box").find("#pwdRepeat_info").removeClass("block");
             } else {
-                $(this).parents(".passval").next().removeClass("block");
-                $(this).parents(".passval").next().next().removeClass("block");
+                $(this).parents(".pass-box").find("#pwdRepeat_error").removeClass("block");
+                $(this).parents(".pass-box").find("#pwdRepeat_info").removeClass("block");
             }
         }
     })
 
     passwordBInput.focus(function() {
-        $(this).parents(".passval").next().next().addClass("block");
+        $(this).parents(".pass-box").find("#pwdRepeat_info").addClass("block");
     });
 
     /* 监听发送短信验证码 */
     msgCodeBtn.click(function() {
         /* 001-先获取手机号码 */
         phone_input.trigger("blur"); /* 自动触发失去焦点的事件 */
-        var flag1 = phone_input.parents(".phval").next().hasClass("block");
-        var flag2 = phone_input.parents(".phval").next().hasClass("block");
+        var flag1 = phone_input.parents(".phone-box").find("#Phone_error").hasClass("block");
+        var flag2 = phone_input.parents(".phone-box").find("#Phone_active").hasClass("block");
         if (flag1 || flag2) {
             alert("手机号码不正确！请检查");
             return;
@@ -158,20 +180,51 @@ $(function() {
         /* 先获取输入框的值，检查和清理(空格|空) */
         let val = $(this).val().trim();
         if (val.length == 0) {
-            $(this).parent().next().addClass("block").text("手机验证码不能为空!");
+            $(this).parents(".bt-box").find("#msglab").addClass("block").text("手机验证码不能为空!");
+            // console.log(val);
 
         } else {
             if (num != val) {
-                $(this).parent().next().addClass("block").text("手机验证码不正确!");
+                $(this).parents(".bt-box").find("#msglab").addClass("block").text("手机验证码不正确!");
 
             } else {
-                $(this).parent().next().removeClass("block")
+                $(this).parents(".bt-box").find("#msglab").removeClass("block")
             }
         }
     })
     msgCodeInput.focus(function() {
-        $(this).parent().next().removeClass("block")
+        $(this).parents(".bt-box").find("#msglab").removeClass("block")
     })
-    let
 
+    // let
+    $("#zhuce").click(function() {
+        phone_input.trigger("blur");
+        passwordAInput.trigger("blur");
+        passwordBInput.trigger("blur");
+        msgCodeInput.trigger("blur");
+        // console.log(!bs || !$(".checkbox").prop("checked") || $("#msglab").hasClass("block") || $("#pwdRepeat_error").hasClass("block") || $("#pwdRepeat_info").hasClass("block") || $("#pwd_info").hasClass("block") || $("#pwd_error").hasClass("block") || $("#Phone_active").hasClass("block") || $("#Phone_error").hasClass("block"));
+
+        if (!(bs && $(".checkbox").prop("checked")) || $("#msglab").hasClass("block") || $("#pwdRepeat_error").hasClass("block") || $("#pwdRepeat_info").hasClass("block") || $("#pwd_info").hasClass("block") || $("#pwd_error").hasClass("block") || $("#Phone_active").hasClass("block") || $("#Phone_error").hasClass("block")) {
+            // alert("请完善信息")
+            console.log(!(bs && $(".checkbox").prop("checked")));
+
+            // console.log(bs || $(".checkbox").prop("checked") || $("#msglab").hasClass("block") || $("#pwdRepeat_error").hasClass("block") || $("#pwdRepeat_info").hasClass("block") || $("#pwd_info").hasClass("block") || $("#pwd_error").hasClass("block") || $("#Phone_active").hasClass("block") || $("#Phone_error").hasClass("block"));
+        } else {
+            console.log(11111);
+
+            $.ajax({
+                type: "get",
+                url: "../server/zhuce.php",
+                data: `phone=${$("#phone").val()}&password=${$("#passwordA").val()}`,
+
+                success: function(response) {
+                    if (response == "true") {
+                        window.location = "../html/dl.html"
+                    } else {
+                        alert("该用户已注册！")
+                    }
+                }
+            });
+        }
+    })
 })

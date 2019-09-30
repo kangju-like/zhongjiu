@@ -147,6 +147,11 @@
         position: relative;
     }
     
+    .cart-list {
+        overflow: auto !important;
+        height: 550px !important;
+    }
+    
     .head-box {
         height: 90px;
         padding-top: 30px;

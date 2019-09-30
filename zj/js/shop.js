@@ -41,7 +41,7 @@ $(function() {
                 <div class="p-shop-N">
                     <label class="SN" id="lblShopName_3302"><a href="">${e.pshop}</a></label>
 
-                    <label class="shop-cart" id="addCart_3302"><i></i></label>
+                    <label class="shop-cart" id="addCart_${e.sid}"><i></i></label>
                 </div>
             </div>
             <div class="scale-img">
@@ -57,48 +57,82 @@ $(function() {
         </ul>
     </div>`)
     }
+    new Promise(function(resolve, reject) {
+        $.ajax({
+            type: "get",
+            url: "../server/select.php",
 
-    $.ajax({
-        type: "get",
-        url: "../server/select.php",
-
-        dataType: "json",
-        success: function(response) {
-            console.log(response)
-            setShop(response.res);
-            $(".clearfix").mouseenter(function() {
-                $(this).find(".scale-img").addClass("block");
-                $(this).find(".shop-cart").addClass("block");
-                // $(this).siblings().find('.scale-img').removeClass("block")
-                // $(this).siblings().find('.shop-cart').removeClass("block")
-            })
-            $(".clearfix").mouseleave(function() {
-                $(this).find('.scale-img').removeClass("block")
-                $(this).find('.shop-cart').removeClass("block")
-            })
-        },
+            dataType: "json",
+            success: function(response) {
+                console.log(response)
+                setShop(response.res);
+                $(".clearfix").mouseenter(function() {
+                    $(this).find(".scale-img").addClass("block");
+                    $(this).find(".shop-cart").addClass("block");
+                    // $(this).siblings().find('.scale-img').removeClass("block")
+                    // $(this).siblings().find('.shop-cart').removeClass("block")
+                })
+                $(".clearfix").mouseleave(function() {
+                    $(this).find('.scale-img').removeClass("block")
+                    $(this).find('.shop-cart').removeClass("block")
+                })
+                resolve()
+            },
 
 
 
-    });
-    // 购物车***************************************
-    $.ajax({
-        type: "get",
-        url: "../server/bycar.php",
-        // data: "data",
-        dataType: "json",
-        success: function(response) {
-            console.log(response);
-            let pnum = 0;
-            $.each(response.res, function(index, ele) {
-                pnum += (ele.num * 1)
-                console.log(ele.num);
+        });
+    }).then(function() {
+        // 购物车***************************************
+        function rightCar() {
+            $.ajax({
+                type: "get",
+                url: "../server/bycar.php",
+                // data: "data",
+                dataType: "json",
+                success: function(response) {
 
-            })
-            $("#right_cart em").text(pnum)
+                    let pnum = 0;
+                    $.each(response.res, function(index, ele) {
+                        pnum += (ele.num * 1)
 
+
+                    })
+                    $("#right_cart em").text(pnum)
+
+                }
+            });
         }
-    });
+        rightCar()
+            // 点击小车添加购物车
+        $.each($(".shop-cart i"), function() {
+
+            $(this).click(function() {
+                let sid = $(this).parents(".clearfix").attr("name") * 1;
+                let price = $(this).parents(".clearfix").find(".p-price strong").text().slice(1);
+                let name = $(this).parents(".clearfix").find(".p-name a").text();
+                let img = $(this).parents(".clearfix").find(".p-img img").get(0).src;
+                let num = 1;
+
+
+                $.ajax({
+                    type: "get",
+                    url: "../server/buy.php",
+                    data: `sid=${sid}&name=${name}&price=${price}&num=${num}&img=${img}`,
+                    dataType: "json",
+                    success: function(response) {
+                        console.log(response)
+                    }
+
+                });
+                rightCar()
+            })
+        })
+    })
+
+
+
+
     // $(".scale-img img").mouseenter(function() {
     //         $(this).parents(".scale-img").siblings('.lh-wrap').find('img').get(0).src = this.src;
     //         // console.log($(this).parents(".scale-img").siblings('.lh-wrap').find('img').get(0).src);

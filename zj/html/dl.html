@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>登录</title>
     <link rel="stylesheet" href="../css/dl.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/dl.js"></script>
 </head>
 
 <body>
@@ -24,14 +26,14 @@
                 <div class="tab-content">
                     <ul class="tab_tit">
                         <li class="">
-                            <a href="" class="sao">扫码登录</a>
+                            <a href="javascript:void(0);" class="sao">扫码登录</a>
                         </li>
                         <li class="active">
-                            <a href="">账户登录</a>
+                            <a href="javascript:void(0);" class="user">账户登录</a>
                         </li>
                     </ul>
                     <div class="tab-cont">
-                        <section class="">
+                        <section id="saoma" style="display: none">
                             <div class="saom_login">
                                 <p><img width="159" height="159" id="scanimg" src="https://www.zhongjiu.cn/login/GetQR?t=Wed%20Sep%2018%202019%2019:33:29%20GMT+0800%20(%E4%B8%AD%E5%9B%BD%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4))"></p>
                                 <span>打开中酒网App</span>
@@ -39,7 +41,7 @@
                             </div>
                             <span><img src="https://www.zhongjiu.cn/Areas/Web/Images/sao_2.png"></span>
                         </section>
-                        <section class="hidden">
+                        <section id="user" style="display: none">
                             <div class="login-box">
                                 <div class="np">
                                     <div class="hidden error" style="width: 276px; padding: 3px 0px 3px 10px;"><img src="https://www.zhongjiu.cn/Areas/Web/Images/icon-msg.png" alt="" style="margin-right: 24px;"><span id="checkCode_error">用户名和密码不匹配</span></div>
@@ -53,12 +55,12 @@
                                         <div class="iconBox">
                                             <img src="https://www.zhongjiu.cn/Areas/Web/Images/icon-lock.png" alt="">
                                         </div>
-                                        <input type="text" placeholder="请输入密码" class="password">
+                                        <input type="password" placeholder="请输入密码" class="password">
                                     </div>
                                     <div id="btn" class="btn">登录</div>
                                     <div class="tipsText">
                                         <p class="toggleLoginBtn" style="cursor:pointer" data-status="1">短信验证码登录</p>
-                                        <a href="">忘记密码</a>
+                                        <a href="javascript:void(0);">忘记密码</a>
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +77,7 @@
                             <span>微信</span>
                         </a>
                         <span> | </span>
-                        <a href="Register" target="_blank">立即注册</a>
+                        <a href="../html/zhuce.html" target="_blank">立即注册</a>
                     </div>
                 </div>
 

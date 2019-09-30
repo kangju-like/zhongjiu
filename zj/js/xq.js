@@ -51,8 +51,9 @@ $(function() {
     // 加号
 
     $(".btn-add").click(function() {
-        $("#buy-num").val(($("#buy-num").val() * 1) + 1)
-    })
+            $("#buy-num").val(($("#buy-num").val() * 1) + 1)
+        })
+        // 减号
     $(".btn-reduce").click(function() {
         $("#buy-num").val(($("#buy-num").val() * 1) - 1)
         minus()

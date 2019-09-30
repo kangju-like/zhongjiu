@@ -1,4 +1,4 @@
-<?php
+<?php   
     $sid = $_GET["sid"];
     $name = $_GET["name"];
     $price =$_GET["price"];

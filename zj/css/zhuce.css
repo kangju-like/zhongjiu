@@ -290,5 +290,5 @@
     }
     
     .block {
-        display: block;
+        display: block !important;
     }

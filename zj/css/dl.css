@@ -31,6 +31,10 @@ input {
     border-image: initial;
 }
 
+.block {
+    display: block !important;
+}
+
 html,
 body {
     width: 100%;

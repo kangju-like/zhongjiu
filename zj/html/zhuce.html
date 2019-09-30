@@ -48,7 +48,7 @@
                         <input id="phone" type="text">
                         <i class="i"></i>
                     </div>
-                    <label id="Phone_error" class="error">请输入正确的手机号码</label>
+                    <label id="Phone_error" style="display:none;" class="error">请输入正确的手机号码</label>
                     <label id="Phone_active" class="active">请输入手机号码</label>
                 </div>
                 <div class="hua lie">
@@ -88,7 +88,7 @@
                     <label id="checkAgreement_error" class="error">请仔细阅读并同意以上协议</label>
                 </div>
                 <div class="button lie">
-                    <input type="button" value="立即注册">
+                    <input type="button" id="zhuce" value="立即注册">
                 </div>
             </div>
 
@@ -105,32 +105,32 @@
 <script type="text/javascript">
     let res
     $(function() {
-        console.log(parseFloat('1px'))
 
 
-        var SlideVerifyPlug = window.slideVerifyPlug;
-        var slideVerify = new SlideVerifyPlug('#verify-wrap', {
-            wrapWidth: '272', //设置 容器的宽度 ,不设置的话，会设置成100%，需要自己在外层包层div,设置宽度，这是为了适应方便点；
-            initText: '请按住往右滑', //设置  初始的 显示文字
-            sucessText: '验证通过', //设置 验证通过 显示的文字
-            getSuccessState: function(res) {
-                //当验证完成的时候 会 返回 res 值 true，只留了这个应该够用了 
-                console.log(res);
-            }
-        });
-        // $("#resetBtn").on('click', function() {
+
+        // var SlideVerifyPlug = window.slideVerifyPlug;
+        // var slideVerify = new SlideVerifyPlug('#verify-wrap', {
+        //     wrapWidth: '272', //设置 容器的宽度 ,不设置的话，会设置成100%，需要自己在外层包层div,设置宽度，这是为了适应方便点；
+        //     initText: '请按住往右滑', //设置  初始的 显示文字
+        //     sucessText: '验证通过', //设置 验证通过 显示的文字
+        //     getSuccessState: function(res) {
+        //         //当验证完成的时候 会 返回 res 值 true，只留了这个应该够用了 
+        //         console.log(res);
+        //     }
+        // });
+
+
+
+        // var slideVerify2 = new SlideVerifyPlug('#verify-wrap2', {
+        //     initText: '请按住滑块',
+        //     sucessText: '验证通过',
+
+        // }); // $("#resetBtn").on('click', function() {
         //     slideVerify.resetVerify(); //可以重置 插件 回到初始状态 
         // })
         // $("#getState").on('click', function() {
         //     alert(slideVerify.slideFinishState); //这个可以拿到 当前验证状态  是否完成
         // })
-
-
-        var slideVerify2 = new SlideVerifyPlug('#verify-wrap2', {
-            initText: '请按住滑块',
-            sucessText: '验证通过',
-
-        });
         // $("#resetBtn2").on('click', function() {
         //     slideVerify2.resetVerify();
         // })

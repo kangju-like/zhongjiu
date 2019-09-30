@@ -1,5 +1,6 @@
 $(function() {
     $("#right_cart").click(function() {
+        hasclass()
         $(".side-content").toggleClass("block");
         // console.log(3333);
 
@@ -9,7 +10,7 @@ $(function() {
             // data: "data",
             dataType: "json",
             success: function(response) {
-                console.log(response);
+                // console.log(response);
                 let pnum = 0;
                 let moneys = 0;
                 $.each(response.res, function(index, ele) {
@@ -31,17 +32,21 @@ $(function() {
             }
 
         });
-        hasclass()
+
     })
     $("body").click(function() {
 
     })
 
     function hasclass() {
+        console.log(console);
+
         if ($(".side-content").hasClass("block")) {
+            console.log("has");
 
         } else {
             $("div").remove(".cart-list-goods")
+            console.log("no");
 
         }
     }

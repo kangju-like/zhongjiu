@@ -16,6 +16,15 @@ a {
     display: block !important;
 }
 
+.cart-list {
+    overflow: auto !important;
+    height: 550px !important;
+}
+
+.right-side-menu {
+    z-index: 2;
+}
+
 
 /* body{background-color: #212121} */
 
@@ -1705,8 +1714,9 @@ user agent stylesheet a:-webkit-any-link {
     position: relative;
     height: 100%;
     background-color: #e6e6e6;
+    padding-left: 41px;
     /* display: flex; */
-    width: 220px;
+    width: 220px !important;
     flex-direction: column-reverse;
 }
 
@@ -1840,10 +1850,15 @@ input {
 .side-cart-c .side-bt {
     bottom: 20px;
     left: 0;
-    padding: 0 15px;
+    padding: 0 54px;
     width: 190px;
     position: absolute;
     background-color: #e6e6e6;
+}
+
+.side-content {
+    background: #fff;
+    padding-bottom: 40px;
 }
 
 .side-cart-c .cart-total {
@@ -1873,6 +1888,7 @@ input[type="checkbox" i] {
     height: 40px;
     line-height: 40px;
     text-align: center;
+    margin-bottom: 30px;
     color: #fff;
     background-color: #e3393c;
     border: 0 none;

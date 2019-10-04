@@ -23,6 +23,9 @@ $(function() {
             datatype: "json",
             success: function(response) {
                 console.log(response);
+                if (response == "true") {
+                    alert("登录成功")
+                }
 
             }
         });

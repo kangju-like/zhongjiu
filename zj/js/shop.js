@@ -114,6 +114,7 @@ $(function() {
                 let img = $(this).parents(".clearfix").find(".p-img img").get(0).src;
                 let num = 1;
 
+                console.log(sid);
 
                 $.ajax({
                     type: "get",
